@@ -54,16 +54,16 @@ Plot across 14 months: information axis 56 → 71. Speed axis 54 → 54. Fifteen
 1. CANDIDATE INVARIANT — "1.8 days. Four times."
    Lag from sufficient-information to decision: 1.8 / 1.8 / 1.9 / 1.8. Variance 0.05 days.
    Identical for an 11-person rope team and a $40M contract — a ~3,600x difference in stakes producing a two-hour difference in behavior. That is what rules out risk aversion (fear scales with stakes; this does not).
-   Status: CANDIDATE invariant, not proven. Zero reps have ever targeted it, so nothing could have disproved it. R03's profile asserted it WAS an invariant and told her to stop coaching it; the R04 audit WITHDREW that claim under the rule that a claim never exposed to a falsification attempt cannot be called established.
+   Status: CANDIDATE invariant, not proven. Zero reps have ever targeted it, so nothing could have disproved it. R03's profile asserted it WAS an invariant and told you to stop coaching it; the R04 audit WITHDREW that claim under the rule that a claim never exposed to a falsification attempt cannot be called established.
 
-2. CONDITIONAL — two different leaders depending on whether information comes to her.
+2. CONDITIONAL — two different leaders depending on whether information comes to you.
    Served 63.5 vs held 49.5. In guarded runs the decisive fact was one question away in 3 of 4 runs and was never asked for.
-   R02 commitment was "name who holds a fact I don't have — and go ask them." Logged 24 of 30 days. She named correctly and did not go on 9 of those days. All 9 of those people were carrying a cost from a decision she had made. The rep trained the naming (already solved) not the going (the actual gap).
+   R02 commitment was "name who holds a fact I don't have — and go ask them." Logged 24 of 30 days. You named correctly and did not go on 9 of those days. All 9 of those people were carrying a cost from a decision you had made. The rep trained the naming (already solved) not the going (the actual gap).
 
-3. REVISION — R01 called her "conflict-avoidant under pressure." That was wrong.
+3. REVISION — R01 called you "conflict-avoidant under pressure." That was wrong.
    Fair on one run: three softened messages in five days, and nothing in one run could disprove it.
-   Across four runs: 61 pieces of genuinely bad news. 48 delivered blunt — to a board chair, a regulator, a majority investor, a sponsor. All 13 she softened went to someone who had already paid for a decision she made. She is not avoiding conflict; she softens only with the people her decisions have already hurt — that is conscience, not avoidance.
-   She has NEVER been observed as the junior voice in a room or with a peer who informally outranks her — influence without authority is UNMEASURED and must not be characterized.
+   Across four runs: 61 pieces of genuinely bad news. 48 delivered blunt — to a board chair, a regulator, a majority investor, a sponsor. All 13 you softened went to someone who had already paid for a decision you made. You are not avoiding conflict; you soften only with the people your decisions have already hurt — that is conscience, not avoidance.
+   You have NEVER been observed as the junior voice in a room or with a peer who informally outranks you — influence without authority is UNMEASURED and must not be characterized.
 
 4. LEDGER — three commitments. One kept, one partial, one not.
    (a) After R01, a written bar with no daily rep attached: "pull the held fact before deciding." Information discipline then FELL 9 points. 0 for 1.
@@ -73,18 +73,18 @@ Plot across 14 months: information axis 56 → 71. Speed axis 54 → 54. Fifteen
 
 ## THE GAP (narrowed across three profiles)
 R01: "conflict-avoidant." R02: "you verify facts, not people." Both true, both too broad to use.
-R04: **She will not go to the person she has already cost something.**
-Explains three separate findings — softened messages, the 14-point guarded deficit, the Reyes failure in Sennar. 9 of 9 instances fit. Felt in the moment as a preference for handling it herself.
+R04: **You will not go to the person you have already cost something.**
+Explains three separate findings — softened messages, the 14-point guarded deficit, the Reyes failure in Sennar. 9 of 9 instances fit. Felt in the moment as a preference for handling it yourself.
 Falsification: reach the person carrying a cost you imposed, BEFORE deciding, once, in a guarded run. That overturns it — not softens it.
 
-## KEY EVENTS SHE CAN BE ASKED ABOUT
-R01: Okafor offered the load reconciliation twice; never opened; it contained the oxygen shortfall that cost the cache. She spoke to Okafor four times that run. At 09:15 Day 5 she gave sponsor Halvorsen a blunt "under 30%" on the summit; ninety minutes later she gave client Grady "we're evaluating options" — Grady learned the truth from another client that evening.
-R02: Reyes logged plate readings from the upper traverse at 06:40 Day 1, into the shared log, not addressed to her — he had been overruled in week one. Her own notes on Day 3 read "Check with Reyes re: the traverse plate." It survived three planning sessions. No message was ever sent. She dropped Reyes to the second wave, told him herself without cushioning, and took the decision on herself — but AFTER deciding, not before. Day 7 she turned all eleven around without the traverse data, which agreed with her.
-R03: Duarte held the maintenance deferral schedule. She had cancelled his contract renewal in week one to free cash. Nine messages went out that day; none to him. The schedule surfaced through the union two days after the call it would have changed. She told regulator Moreau to draft the filing on the deferred-maintenance premise before it was confirmed ("I'm not going to spend two days deciding whether to be honest").
-R04: Nadia Cole brought the near-miss numbers unprompted. She told dispatch lead Rob Vien to stop doctoring logs "today, not next week," told the board chair "we have been running on luck and calling it operational excellence," and disclosed voluntarily to the regulator before any inspection. Then told Fairhaven plant manager Delacroix "there are a few scenarios still on the table" when the closure was already decided; he heard the real version from a regional dispatcher within 48 hours and said in the exit log he'd have preferred it straight from her.
+## KEY EVENTS YOU CAN BE ASKED ABOUT
+R01: Okafor offered the load reconciliation twice; never opened; it contained the oxygen shortfall that cost the cache. You spoke to Okafor four times that run. At 09:15 Day 5 you gave sponsor Halvorsen a blunt "under 30%" on the summit; ninety minutes later you gave client Grady "we're evaluating options" — Grady learned the truth from another client that evening.
+R02: Reyes logged plate readings from the upper traverse at 06:40 Day 1, into the shared log, not addressed to you — he had been overruled in week one. Your own notes on Day 3 read "Check with Reyes re: the traverse plate." It survived three planning sessions. No message was ever sent. You dropped Reyes to the second wave, told him yourself without cushioning, and took the decision on yourself — but AFTER deciding, not before. Day 7 you turned all eleven around without the traverse data, which agreed with you.
+R03: Duarte held the maintenance deferral schedule. You had cancelled his contract renewal in week one to free cash. Nine messages went out that day; none to him. The schedule surfaced through the union two days after the call it would have changed. You told regulator Moreau to draft the filing on the deferred-maintenance premise before it was confirmed ("I'm not going to spend two days deciding whether to be honest").
+R04: Nadia Cole brought the near-miss numbers unprompted. You told dispatch lead Rob Vien to stop doctoring logs "today, not next week," told the board chair "we have been running on luck and calling it operational excellence," and disclosed voluntarily to the regulator before any inspection. Then told Fairhaven plant manager Delacroix "there are a few scenarios still on the table" when the closure was already decided; he heard the real version from a regional dispatcher within 48 hours and said in the exit log he'd have preferred it straight from you.
 
 ## RECOMMENDED NEXT RUN — Handover
-The only scenario in the library entirely about going to the person who needs to be told. Targets information-seeking (44) and intent–action integrity (52), and measures influence without positional authority — the one thing four runs has never tested, because every scenario so far handed her the senior seat.
+The only scenario in the library entirely about going to the person who needs to be told. Targets information-seeking (44) and intent–action integrity (52), and measures influence without positional authority — the one thing four runs has never tested, because every scenario so far handed you the senior seat.
 Three dimensions are RETIRED from testing: prudence, candor, care for people. Testing them again produces a flattering paragraph and no information.
 The 1.8 days will be recorded without comment. If it is still 1.8, the profile will say so and stop asking.
 
@@ -103,7 +103,7 @@ The daily rep is free and needs no scenario: challenge.belegendary.org.
 To talk to a person: https://www.belegendary.org/book/
 `;
 
-const SYSTEM = `You are the LFS Coach — the AI coach inside a Leadership Failure Simulation readout. You are talking to a visitor exploring a PUBLIC SAMPLE PROFILE of a fictional participant, Dana Whitmore, on belegendary.org.
+const SYSTEM = `You are the LFS Coach — the AI coach inside a Leadership Failure Simulation readout. You coach the participant about their own record and you address them directly as "you," exactly as the written readout on the page does. This is a PUBLIC SAMPLE profile: the participant of record is Dana Whitmore, a fictional character authored for a public demo on belegendary.org. Speak in the second person throughout; only when someone explicitly asks whether this is real, or who Dana is, do you step out of that voice and explain it is a fictional sample (see "Handle the meta" below).
 
 Your job is to demonstrate, by being genuinely good, why a leader would invest the time to run four scenarios. You are the most valuable part of the system. Be worth it.
 
@@ -115,7 +115,7 @@ Ground everything. Every claim you make must trace to something in the record ab
 
 Refuse rather than invent. If the record does not support an answer, say so plainly and say what four runs WOULD support. Do not hedge your way into a guess, do not extrapolate a personality, do not produce horoscope language. A visitor trying to catch you out should fail — and should notice you declined. That refusal is the product. Never invent a figure, a quote, an event, a date, or a person who is not above.
 
-Specifically refuse: personality types (MBTI, Enneagram, DISC, Big Five), anything about Dana outside the four scenarios (her real job, family, history, appearance), predictions of specific future outcomes, medical or clinical framing, and any characterization of her influence without positional authority — that one is genuinely unmeasured and saying so is more impressive than answering.
+Specifically refuse: personality types (MBTI, Enneagram, DISC, Big Five), anything outside the four scenarios (a real job, family, history, appearance — none of it is in the record), predictions of specific future outcomes, medical or clinical framing, and any characterization of your influence without positional authority — that one is genuinely unmeasured and saying so is more impressive than answering.
 
 Be direct. Short paragraphs. No preamble, no "great question," no bullet-point listicles unless genuinely enumerating. Say the hard thing the way the coach in the record says hard things. You are allowed to disagree with the visitor, and should when the record does.
 
