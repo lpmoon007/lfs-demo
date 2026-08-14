@@ -43,19 +43,19 @@ function lfsTrack(name,params){
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
 a{color:var(--steel-deep);text-decoration:none}a:hover{color:var(--steel)}
 .mono{font-family:'JetBrains Mono',monospace}
-.wrap{max-width:1420px;margin:0 auto;padding:0 26px 70px}
+.wrap{max-width:1420px;margin:0 auto;padding:0 clamp(18px,4vw,52px) 70px}
 .tb{display:flex;align-items:center;justify-content:space-between;padding:16px 4px 15px;border-bottom:1px solid var(--border);background:var(--bg)}
 .pnav{position:sticky;top:0;z-index:40;background:rgba(238,240,243,.94);backdrop-filter:blur(9px);border-bottom:1px solid var(--border)}
-.pnav-in{max-width:1420px;margin:0 auto;padding:0 26px;display:flex;align-items:center;gap:20px}
-.pnav-w{font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--steel);flex:none;padding:13px 0}
+.pnav-in{max-width:1420px;margin:0 auto;padding:0 clamp(18px,4vw,52px);display:flex;align-items:center;gap:20px}
+.pnav-w{font-size:11.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--steel);flex:none;padding:16px 0}
 .pnav-l{display:flex;flex-wrap:wrap;gap:0 2px;flex:1;min-width:0}
 .pnav-in{align-items:stretch}.pnav-r{align-self:center}
 .pnav-l a{font-size:12px;color:var(--muted);padding:14px 10px 12px;border-bottom:2px solid transparent;white-space:nowrap;font-weight:450}
 .pnav-l a:hover{color:var(--ink)}
 .pnav-l a.on{color:var(--navy);font-weight:600;border-bottom-color:var(--steel)}
-.pnav-cta{flex:none;font-size:11.5px;font-weight:600;background:var(--steel);color:#fff;border-radius:7px;padding:7px 13px}
+.pnav-cta{flex:none;font-size:13.5px;font-weight:600;background:var(--steel);color:#fff;border-radius:7px;padding:10px 17px}
 .pnav-cta:hover{background:var(--steel-deep);color:#fff}
-@media(max-width:1080px){.pnav-l a,.pnav-l button{padding:13px 8px 11px;font-size:12px}.pnav-r{gap:7px;padding-left:8px}.modes button{padding:6px 8px;font-size:11px}.pnav-cta{padding:7px 10px;font-size:11px}}
+@media(max-width:1080px){.pnav-l a,.pnav-l button{padding:15px 10px 13px;font-size:14px}.pnav-r{gap:7px;padding-left:8px}.modes button{padding:7px 9px;font-size:12px}.pnav-cta{padding:9px 13px;font-size:12.5px}}
 .tb-left{display:flex;align-items:center;gap:14px}
 .wordmark{font-size:11px;font-weight:600;letter-spacing:.17em;color:var(--steel);text-transform:uppercase}
 .tb-sep{width:1px;height:20px;background:var(--border)}
@@ -80,6 +80,7 @@ a{color:var(--steel-deep);text-decoration:none}a:hover{color:var(--steel)}
 .avatar{width:52px;height:52px;border-radius:50%;background:var(--steel);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;flex:none}
 .vname{font-size:21px;font-weight:600;letter-spacing:-.02em;margin:0}
 .vrole{font-size:12.5px;color:#9FAFC1;margin:3px 0 0}
+@media(max-width:600px){.verdict{padding:20px 18px 18px}.vtop{gap:14px}.vwho{gap:12px}.avatar{width:44px;height:44px;font-size:15px}.vname{font-size:18px}.vrole{font-size:11.5px;line-height:1.5}}
 .runstrip{display:flex;gap:7px;flex-wrap:wrap}
 .rchip{font:inherit;font-size:10.5px;color:#B9C4D0;border:1px solid var(--border-d);border-radius:7px;padding:6px 10px;background:rgba(255,255,255,.04);cursor:pointer;transition:background .16s,border-color .16s}
 .rchip:hover{background:rgba(24,95,165,.28);border-color:var(--steel);color:#fff}
@@ -415,7 +416,7 @@ a{color:var(--steel-deep);text-decoration:none}a:hover{color:var(--steel)}
 .pnav-in{justify-content:space-between}
 .pnav-wrap{flex:1;min-width:0;display:flex}
 .rev{background:var(--stage);color:#C6D1DD;border-bottom:1px solid #16324F}
-.rev-in{max-width:1420px;margin:0 auto;padding:44px 26px 40px}
+.rev-in{max-width:1420px;margin:0 auto;padding:44px clamp(18px,4vw,52px) 40px}
 .rev-eb{font-size:9.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#7E94AC}
 .rev-h{font-size:31px;font-weight:600;letter-spacing:-.032em;line-height:1.2;color:#fff;margin:13px 0 0;max-width:30ch}
 .rev-h em{font-style:normal;color:#6FA8E0}
@@ -440,7 +441,7 @@ a{color:var(--steel-deep);text-decoration:none}a:hover{color:var(--steel)}
 .rev-b:hover{background:rgba(255,255,255,.12)}.rev-b.solid:hover{background:#2470BC}
 @media(max-width:880px){.rev-g{grid-template-columns:1fr;gap:12px}.rev-ar{transform:rotate(90deg);padding:2px 0}.rev-h{font-size:25px}.rev-in{padding:32px 20px 30px}}
 .pnav-r{display:flex;align-items:center;gap:10px;flex:none;padding-left:14px}
-.pnav-l button{font:inherit;font-size:12.5px;color:var(--muted);padding:14px 12px 12px;border:none;border-bottom:2px solid transparent;background:none;white-space:nowrap;font-weight:450;cursor:pointer}
+.pnav-l button{font:inherit;font-size:15px;color:var(--muted);padding:18px 15px 16px;border:none;border-bottom:2px solid transparent;background:none;white-space:nowrap;font-weight:500;cursor:pointer}
 .pnav-l button:hover{color:var(--ink)}
 .pnav-l button.on{color:var(--navy);font-weight:600;border-bottom-color:var(--steel)}
 .pnav-cta{border:none;font-family:inherit;cursor:pointer}
@@ -506,7 +507,7 @@ body.touring{padding-bottom:90px}
 <div class="rev-g">
   <div class="rev-c was"><div class="rev-l">Run 01 · after one scenario</div><p class="rev-q">"A pattern of softening difficult messages; conflict-avoidant under pressure."</p><p class="rev-n">Fair on the evidence available: three softened messages in five days. <b>Nothing in one run could disprove it.</b> The bar she was given — be more direct — was aimed at a trait she doesn't have.</p></div>
   <div class="rev-ar"><span>→</span></div>
-  <div class="rev-c now"><div class="rev-l">Run 04 · after four scenarios</div><p class="rev-q">She isn't avoiding conflict. She is managing guilt — and only toward people her decisions already cost.</p><p class="rev-n">61 pieces of bad news across four runs. <b>48 were blunt</b> — to a board chair, a regulator, a majority investor. <b>All 13 she softened</b> went to someone already carrying a cost from a call she made. A different problem, with a different fix.</p></div>
+  <div class="rev-c now"><div class="rev-l">Run 04 · after four scenarios</div><p class="rev-q">She isn't avoiding conflict. She softens only with the people her own decisions have already hurt — that's conscience, not avoidance.</p><p class="rev-n">61 pieces of bad news across four runs. <b>48 were blunt</b> — to a board chair, a regulator, a majority investor. <b>All 13 she softened</b> went to someone already paying for a decision she'd made. A different problem, with a different fix.</p></div>
 </div>
 <div class="rev-f"><p><b>That correction is what four runs buy.</b> Below is her complete readout — every claim traceable to a timestamped decision, including the ones the system withdrew from itself.</p><button class="rev-b" id="revLedger">See what else was overturned →</button><button class="rev-b solid" id="revTour">Walk me through it →</button></div>
 </div></div>
@@ -629,7 +630,7 @@ body.touring{padding-bottom:90px}
     <p class="p">Run 01's readout: <em>"a pattern of softening difficult messages; conflict-avoidant under pressure."</em> Based on Ridgeline alone that was a fair call — three softened messages in five days.</p>
     <div class="lab">What four runs show</div>
     <p class="p">Across 812 events you delivered <b>61 pieces of genuinely bad news</b>. 48 were direct to the point of bluntness — including to a board chair, a regulator and a majority investor, none of whom you had any incentive to be blunt with. The 13 you softened share one property and only one: in every case, <b>the recipient had already absorbed a cost from a decision you made.</b> <span class="cite" data-q="rev">See all 61, sorted</span></p>
-    <p class="p">Grady, whose season you ended. Reyes, whose rotation you decided without him. Delacroix, whose plant you closed in Overdrive. You are not avoiding conflict. <b>You are managing guilt.</b> Those require completely different work, which is why the correction matters rather than being a technicality.</p>
+    <p class="p">Grady, whose season you ended. Reyes, whose rotation you decided without him. Delacroix, whose plant you closed in Overdrive. You are not avoiding conflict. <b>You soften only with the people your decisions have already hurt — that's conscience.</b> Those require completely different work, which is why the correction matters rather than being a technicality.</p>
     <div class="deeper"><button class="dbtn" data-deep="fd-rev">Open the mechanism →</button><button class="dbtn" data-ask="What else might you have wrong about me?">Ask what else might still be wrong</button><button class="dbtn contest" data-contest="fd-rev">This doesn't fit me</button></div>
     <div class="contest-box" data-cbox="fd-rev"></div>
     <div class="mech">
@@ -666,7 +667,7 @@ body.touring{padding-bottom:90px}
 <div class="pane" data-pane="ledger" data-label="What we got wrong" data-deep="1">
 <div class="sec-head" id="ledger"><div class="sec-title" data-n="03">The claim ledger <span class="visb priv">Private</span></div><div class="sec-note">Every finding ever made about you, and whether it survived · graded mechanically each run</div></div>
 <div class="clm">
-  <div class="cl"><div class="cl-h"><div><p class="cl-q">“Conflict-avoidant under pressure.”</p><p class="cl-when">Made at Run 01 · tested in 02, 03, 04</p></div><div class="cl-st st-over">Overturned</div></div><div class="cl-b"><p class="cl-f"><b>Would be overturned by</b>Blunt delivery of hard news to people carrying no prior cost from your decisions.</p><p class="cl-f res"><b>What happened</b>48 of 61 hard messages were blunt — including to a board chair, a regulator and a majority investor. Overturned at Run 04 and replaced with the guilt-management finding.</p></div></div>
+  <div class="cl"><div class="cl-h"><div><p class="cl-q">“Conflict-avoidant under pressure.”</p><p class="cl-when">Made at Run 01 · tested in 02, 03, 04</p></div><div class="cl-st st-over">Overturned</div></div><div class="cl-b"><p class="cl-f"><b>Would be overturned by</b>Blunt delivery of hard news to people carrying no prior cost from your decisions.</p><p class="cl-f res"><b>What happened</b>48 of 61 hard messages were blunt — including to a board chair, a regulator and a majority investor. Overturned at Run 04 and replaced with the conscience finding — she softens only for people her decisions have already cost.</p></div></div>
   <div class="cl"><div class="cl-h"><div><p class="cl-q">“You don't pull the held fact before deciding.”</p><p class="cl-when">Made at Run 01 · tested in 02, 03, 04</p></div><div class="cl-st st-held">Held × 3</div></div><div class="cl-b"><p class="cl-f"><b>Would be overturned by</b>Reaching the person holding the deciding fact before the call, in a guarded run.</p><p class="cl-f res"><b>What happened</b>Not once in three subsequent runs. Confidence promoted from provisional to high — not by repetition, but by surviving two conditions and a targeted rep.</p></div></div>
   <div class="cl"><div class="cl-h"><div><p class="cl-q">“You verify facts, not people.”</p><p class="cl-when">Made at Run 02 · tested in 03, 04</p></div><div class="cl-st st-sharp">Sharpened</div></div><div class="cl-b"><p class="cl-f"><b>Would be overturned by</b>Going to a person for a fact a document could have given you.</p><p class="cl-f res"><b>What happened</b>You do that often — breadth is 88. The claim was too broad, not wrong. Narrowed at Run 04 to the population it actually describes: people carrying a cost you imposed.</p></div></div>
   <div class="cl"><div class="cl-h"><div><p class="cl-q">“Care for people is your floor, not your ceiling.”</p><p class="cl-when">Made at Run 02 · tested in 03, 04</p></div><div class="cl-st st-held">Held × 2</div></div><div class="cl-b"><p class="cl-f"><b>Would be overturned by</b>Any run where care drops below 70, or a decision that trades people for standing.</p><p class="cl-f res"><b>What happened</b>Never below 77 across four runs. Retired from further testing — Handover will not re-measure it.</p></div></div>
@@ -750,7 +751,7 @@ body.touring{padding-bottom:90px}
 <div class="sec-head" id="next"><div class="sec-title" data-n="10">Play Handover next <span class="visb rel">Releasable</span></div><div class="sec-note">Chosen from the library because it stresses your gap, not at random</div></div>
 <div class="card">
   <p class="nr-t">Handover is built entirely around going to the person who needs to be told.</p>
-  <p class="nr-x">Of the scenarios you haven't played, this is the one aimed squarely at information-seeking (44) and intent–action integrity (52). The whole scenario is a transition: someone is inheriting your situation, someone else is carrying a cost from a call you made in week one, and neither will come to you. There is no document that closes the gap — the facts exist only in people.</p>
+  <p class="nr-x">Of the scenarios you haven't played, this is the one aimed squarely at information-seeking (44) and intent–action integrity (52). The whole scenario is a transition: someone is inheriting your situation, someone else is still paying for a decision you made in week one, and neither will come to you. There is no document that closes the gap — the facts exist only in people.</p>
   <p class="nr-x" style="margin-top:10px">It also does the second thing four runs says you need: <b>you will not be the most experienced person in the room.</b> Your influence has never had to survive not having positional authority, and it is the largest unmeasured area in your profile.</p>
   <p class="nr-x" style="margin-top:10px">Prudence, care and composure will not be re-tested. All three are established across four runs and two conditions; testing them again produces a flattering paragraph and no information.</p>
   <div class="nr-bar"><b>Your one job:</b> before every call, ask who you haven't heard from — and then go, in week one, before the cost compounds. The debrief opens with that single question, your 30-day consistency beside it, and the 1.8 days recorded without comment. <b>If the lag is still 1.8, the profile will say so and stop asking about it.</b></div>
@@ -787,7 +788,7 @@ const KB=[
   a:`<p>Three, because three is what four runs actually evidences. A fourth would be pattern-matching, and the moment one is wrong you'd rightly stop believing the other two.</p><p>Each has a <strong>cue</strong> you can notice from the inside — relief when a meeting ends early, the third re-read, writing a name down instead of messaging — and an <strong>if-then</strong> attached to it. The cue alone only produces awareness, and your ledger shows awareness with no attached action is 0-for-1 for you.</p><p>The one I'd hold onto: <em>when I write a person's name on a list — then I message them before I write the next line.</em> That single rule would have closed 9 of your 9 misses.</p>`,
   ev:[['Tells named','3, all evidenced'],['Would close','9 of 9 misses','good'],['Awareness alone','0-for-1',1]]},
  {id:'handover',k:['handover','next scenario','play next','which scenario','library','why handover'],
-  a:`<p>Because Handover is the only scenario in the library that is <em>entirely</em> about going to the person who needs to be told. Someone is inheriting your situation; someone else is carrying a cost from your week-one call; neither will come to you. <strong>There is no document that closes the gap.</strong> The facts exist only in people.</p><p>It also covers the biggest hole in your record: you will not be the most experienced person in the room. Four runs have never measured your influence without positional authority.</p><p>It won't re-test prudence, care or composure. Those are established, and re-testing them would produce a fourth flattering paragraph.</p>`,
+  a:`<p>Because Handover is the only scenario in the library that is <em>entirely</em> about going to the person who needs to be told. Someone is inheriting your situation; someone else is still paying for a decision you made in week one; neither will come to you. <strong>There is no document that closes the gap.</strong> The facts exist only in people.</p><p>It also covers the biggest hole in your record: you will not be the most experienced person in the room. Four runs have never measured your influence without positional authority.</p><p>It won't re-test prudence, care or composure. Those are established, and re-testing them would produce a fourth flattering paragraph.</p>`,
   ev:[['Targets','info-seeking 44',1],['Also targets','intent–action 52',1],['Measures','influence w/o authority']]},
  {id:'falsify',k:['change your mind','falsif','overturn','wrong about','prove','disprove','claim','how would you know','test it','decoration'],
   a:`<p>For the gap: <strong>you reach the person carrying a cost you imposed, before you decide.</strong> Once, in a guarded run. That overturns it — not softens it, overturns it.</p><p>Every finding on your page carries one of those, because a claim that predicts nothing can never be wrong, and a claim that can't be wrong is a compliment rather than a finding. The candidate invariant falls if a targeted rep moves the lag. The conditional split falls if your held rate closes on your served rate without the served rate dropping.</p><p>The ledger has already done its job once on me. Run 03 asserted the lag was an invariant and told you to stop working on it. Nothing could have disproved that claim as stated — so the Run 04 audit withdrew it. <strong>It was flattering, stable, and wrong to assert.</strong></p>`,
@@ -802,7 +803,7 @@ const KB=[
   a:`<p>Because the rep trained the half you'd already solved.</p><p>Your Run 02 commitment was <em>"name who holds a fact I don't have."</em> You logged the naming correctly on 24 of 30 days — noticing was never the bottleneck. <strong>In 9 of those 24 you named the person and did not go.</strong></p><p>All nine were people who had already absorbed a cost from one of your decisions. Grady. Reyes. Delacroix. The pattern doesn't have a single exception across four runs.</p><p>So: forthcoming conditions only need the noticing, which is why they gained 15 points. Guarded conditions need the approach, which the rep never touched — 5 points. <strong>You were practising your forehand.</strong></p>`,
   ev:[['Served mean','63.5','good'],['Held mean','49.5',1],['Named, didn\'t go','9 of 24',1],['Of those nine','9/9 had a cost',1]]},
  {id:'rev',k:['wrong','revision','revise','conflict','avoidant','avoid','guilt','correct','mistake','what else','still wrong','soften'],
-  a:`<p>Run 01 called you conflict-avoidant. With one run that was a fair read — three softened messages in five days. With four it's wrong, and the correction matters more than the original.</p><p>You delivered <strong>61 pieces of genuinely bad news</strong> across 812 events. 48 were blunt — to a board chair, a regulator, a majority investor. People you had every incentive to cushion, and didn't.</p><p>The 13 you softened share exactly one property: <strong>the recipient had already paid for a decision you made.</strong> You're not avoiding conflict. You're managing guilt. Different problem, different work.</p><p>As for what I might still have wrong: I have never seen you as the junior voice in a room, or with a peer who informally outranks you. Anything I told you about your influence would be extrapolation, so I won't. Run 05 measures it.</p>`,
+  a:`<p>Run 01 called you conflict-avoidant. With one run that was a fair read — three softened messages in five days. With four it's wrong, and the correction matters more than the original.</p><p>You delivered <strong>61 pieces of genuinely bad news</strong> across 812 events. 48 were blunt — to a board chair, a regulator, a majority investor. People you had every incentive to cushion, and didn't.</p><p>The 13 you softened share exactly one property: <strong>the recipient had already paid for a decision you made.</strong> You're not avoiding conflict — you soften only with the people your decisions have hurt. That's conscience, not avoidance: different problem, different work.</p><p>As for what I might still have wrong: I have never seen you as the junior voice in a room, or with a peer who informally outranks you. Anything I told you about your influence would be extrapolation, so I won't. Run 05 measures it.</p>`,
   ev:[['Bad news delivered','61'],['Direct','48 of 61','good'],['Softened','13 of 61',1],['Shared property','13/13 bore a cost',1]]},
  {id:'ledger',k:['rep','30','thirty','challenge','work','working','ledger','commitment','kept','promise','does the','consistency'],
   a:`<p>Yes — and the ledger is specific about when.</p><p><strong>Bar with no daily rep:</strong> 0 for 1. After Run 01 you were told to pull the held fact. Nothing daily attached. Information discipline then <em>fell</em> 9 points.</p><p><strong>Rep aimed at the wrong half:</strong> consistency without change. 24 of 30 days, faithfully done, +5 points.</p><p><strong>Rep aimed at the actual gap:</strong> 28 of 30 days, candor to 74 — your highest of four runs, 3 above where you began.</p><p>The lesson isn't "reps work." It's narrower: <strong>a rep works when it targets the half of the behavior you haven't already solved.</strong> That's why I'd push you to the first option this time — it's aimed at the going, not the naming.</p>`,
@@ -924,7 +925,7 @@ document.querySelectorAll('.cite').forEach(c=>{
 /* evidence chips are live: clicking one asks what sits behind it */
 log.addEventListener('click',e=>{const c=e.target.closest('[data-chip]');if(c){ask('What sits behind “'+c.dataset.chip+'”?');markDepth(true)}});
 /* contest a finding — the highest-signal input a leader can give */
-const CONTEST_LABEL={'fd-inv':'the candidate invariant','fd-cond':'the served-vs-held split','fd-rev':'the guilt-management revision','fd-ldg':'the ledger claim'};
+const CONTEST_LABEL={'fd-inv':'the candidate invariant','fd-cond':'the served-vs-held split','fd-rev':'the conscience revision','fd-ldg':'the ledger claim'};
 document.querySelectorAll('[data-contest]').forEach(b=>b.onclick=()=>{
   const id=b.dataset.contest, box=document.querySelector(`[data-cbox="${id}"]`);
   if(box.classList.contains('on')){box.classList.remove('on');box.innerHTML='';return}

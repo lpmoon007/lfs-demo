@@ -62,7 +62,7 @@ Plot across 14 months: information axis 56 → 71. Speed axis 54 → 54. Fifteen
 
 3. REVISION — R01 called her "conflict-avoidant under pressure." That was wrong.
    Fair on one run: three softened messages in five days, and nothing in one run could disprove it.
-   Across four runs: 61 pieces of genuinely bad news. 48 delivered blunt — to a board chair, a regulator, a majority investor, a sponsor. All 13 she softened went to someone who had already paid for a decision she made. She is not avoiding conflict; she is managing guilt.
+   Across four runs: 61 pieces of genuinely bad news. 48 delivered blunt — to a board chair, a regulator, a majority investor, a sponsor. All 13 she softened went to someone who had already paid for a decision she made. She is not avoiding conflict; she softens only with the people her decisions have already hurt — that is conscience, not avoidance.
    She has NEVER been observed as the junior voice in a room or with a peer who informally outranks her — influence without authority is UNMEASURED and must not be characterized.
 
 4. LEDGER — three commitments. One kept, one partial, one not.
