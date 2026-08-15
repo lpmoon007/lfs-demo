@@ -668,7 +668,7 @@ body.touring{padding-bottom:90px}
 </div>
 
 </div>
-<div class="pane" data-pane="ledger" data-label="What we got wrong" data-deep="1">
+<div class="pane" data-pane="ledger" data-label="What we tested" data-deep="1">
 <div class="sec-head" id="ledger"><div class="sec-title" data-n="03">The claim ledger <span class="visb priv">Private</span></div><div class="sec-note">Every finding ever made about you, and whether it survived · graded mechanically each run</div></div>
 <div class="clm">
   <div class="cl"><div class="cl-h"><div><p class="cl-q">“Conflict-avoidant under pressure.”</p><p class="cl-when">Made at Run 01 · tested in 02, 03, 04</p></div><div class="cl-st st-over">Overturned</div></div><div class="cl-b"><p class="cl-f"><b>Would be overturned by</b>Blunt delivery of hard news to people carrying no prior cost from your decisions.</p><p class="cl-f res"><b>What happened</b>48 of 61 hard messages were blunt — including to a board chair, a regulator and a majority investor. Overturned at Run 04 and replaced with the conscience finding — you soften only for people your decisions have already cost.</p></div></div>
@@ -1166,7 +1166,7 @@ document.querySelectorAll('.pane').forEach(p=>{
 });
 const panes=[...document.querySelectorAll('.pane')];
 const nav=document.getElementById('pnavL');
-const SHORT={overview:'Where you stand',findings:'What four runs proved',ledger:'What we got wrong',game:'What you did',rep:'What to change'};
+const SHORT={overview:'Where you stand',findings:'What four runs proved',ledger:'What we tested',game:'What you did',rep:'What to change'};
 nav.innerHTML=panes.map((p,i)=>'<button data-go="'+p.dataset.pane+'" data-full="'+p.dataset.label+'" data-short="'+(SHORT[p.dataset.pane]||p.dataset.label)+'"'+(i===0?' class="on"':'')+'>'+p.dataset.label+'</button>').join('');
 function fit(){
   const btns=[...nav.querySelectorAll('button')];
