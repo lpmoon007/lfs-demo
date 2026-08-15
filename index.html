@@ -1176,7 +1176,7 @@ window.addEventListener('resize',fit);setTimeout(fit,0);
 function show(id,scroll){
   panes.forEach(p=>p.classList.toggle('on',p.dataset.pane===id));
   nav.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.go===id));
-  if(scroll!==false){const t=document.querySelector('.pnav');window.scrollTo({top:t.offsetTop-2,behavior:'smooth'})}
+  if(scroll!==false){const w=document.querySelector('.wrap');const nh=(document.querySelector('.pnav')||{}).offsetHeight||0;window.scrollTo({top:Math.max(0,w.getBoundingClientRect().top+window.scrollY-nh-6),behavior:'smooth'})}
 }
 nav.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)show(b.dataset.go)});
 function goSec(id){const s=document.getElementById('sec-'+id);if(!s)return null;show(s.closest('.pane').dataset.pane,false);
