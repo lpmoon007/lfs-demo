@@ -523,7 +523,7 @@ body.touring{padding-bottom:90px}
 
 <div class="grid">
 <div class="panes">
-<div class="pane on" data-pane="overview" data-label="Where you stand">
+<div class="pane on" data-pane="overview" data-label="Home">
 
 <div class="verdict">
   <div class="vtop">
@@ -1166,7 +1166,7 @@ document.querySelectorAll('.pane').forEach(p=>{
 });
 const panes=[...document.querySelectorAll('.pane')];
 const nav=document.getElementById('pnavL');
-const SHORT={overview:'Where you stand',findings:'What four runs proved',ledger:'What we tested',game:'What you did',rep:'What to change'};
+const SHORT={overview:'Home',findings:'What four runs proved',ledger:'What we tested',game:'What you did',rep:'What to change'};
 nav.innerHTML=panes.map((p,i)=>'<button data-go="'+p.dataset.pane+'" data-full="'+p.dataset.label+'" data-short="'+(SHORT[p.dataset.pane]||p.dataset.label)+'"'+(i===0?' class="on"':'')+'>'+p.dataset.label+'</button>').join('');
 function fit(){
   const btns=[...nav.querySelectorAll('button')];
