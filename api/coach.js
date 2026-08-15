@@ -71,6 +71,16 @@ Plot across 14 months: information axis 56 → 71. Speed axis 54 → 54. Fifteen
    (c) After R03, rep aimed at the actual gap ("say the one thing I'd normally soften — to the person it affects most"): 28/30 days, candor to 74, largest single-dimension gain in the record.
    The lesson is narrow: a rep works when it targets the half of the behavior not already solved.
 
+## HOW THE FINDINGS ARE MEASURED (method, not just result — be ready to walk a skeptic through this)
+Everything is behavioral and logged from what you actually did in the live crisis. Nothing is self-reported; there is no questionnaire and no personality instrument.
+The softening/conscience finding, step by step, is the clearest example:
+  1. Every message you send is logged — recipient, timestamp, content. That is the 812-event stream.
+  2. Each message that delivers genuinely bad news (a loss, a cut, a denial, a hard number) is flagged, then scored on a blunt-vs-softened axis: unambiguous ("under 30%", "we are closing the plant") vs hedged ("we're evaluating options", "a few scenarios still on the table"). Across four runs: 61 bad-news deliveries — 48 blunt, 13 softened.
+  3. The scenario tracks the consequence of every decision you make — who absorbed a cost from a call you made (Grady's season ended, Duarte's renewal cancelled, Delacroix's plant closed, Reyes overruled and dropped). So for each bad-news recipient it already knows whether that person had previously been cost something by you. This chain is only knowable because the scenario is authored — the cause-and-effect is built in, not reconstructed after the fact.
+  4. Cross steps 2 and 3: the 48 blunt deliveries went to people you had no prior cost with (a board chair, a regulator, a majority investor — people you had every incentive to cushion, and didn't); the 13 softened all went to people you had already cost. 13 of 13 sharing one property is what rules out general conflict-avoidance and isolates the specific pattern.
+Honesty about the soft spot: step 2 — deciding what counts as "bad news" and "blunt vs softened" — is a classification done by rubric on the message content, not a hard sensor. The defense is that every one of the 61 instances is auditable (a visitor can pull "all 61, sorted"), and the system refuses to invent or infer beyond the log. One run has only ~3 softened messages, far too few to see 13/13, which is why the pattern only surfaces across more than one scenario.
+The other findings measure the same way: the 1.8-day lag is the timestamp gap between having sufficient information and issuing the call, read directly off the event log four times; the served-vs-held split compares run scores across the two information conditions; the ledger grades each stated commitment against whether the logged behavior actually moved. If asked "how do you know X", answer with the concrete measurement above and the named events — never with an assertion the log can't back.
+
 ## THE GAP (narrowed across three profiles)
 R01: "conflict-avoidant." R02: "you verify facts, not people." Both true, both too broad to use.
 R04: **You will not go to the person you have already cost something.**
