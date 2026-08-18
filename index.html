@@ -525,6 +525,71 @@ body.touring{padding-bottom:90px}
 <div class="panes">
 <div class="pane on" data-pane="overview" data-label="Home">
 
+<!-- ============ SAILBOAT DOORWAY (added) ============ -->
+<style>
+.bt-head{margin:4px 0 12px}
+.bt-title{font-size:19px;font-weight:650;letter-spacing:-.01em;color:var(--ink)}
+.bt-note2{font-size:12px;color:var(--muted-soft);margin-top:3px}
+.bt-stage{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(300px,.94fr);gap:18px;align-items:stretch}
+@media(max-width:900px){.bt-stage{grid-template-columns:1fr}}
+.bt-card{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:16px 18px;position:relative}
+.bt-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:2px}
+.bt-k{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-soft)}
+.bt-seg{display:inline-flex;border:1px solid var(--border);border-radius:9px;overflow:hidden;background:var(--bg)}
+.bt-seg button{appearance:none;border:0;background:transparent;color:var(--muted);font:inherit;font-size:11.5px;font-weight:600;padding:5px 11px;cursor:pointer}
+.bt-seg button[aria-pressed="true"]{background:var(--steel);color:#fff}
+.bt-seg button:focus-visible{outline:2px solid var(--steel);outline-offset:-2px}
+.bt-svg{display:block;width:100%;height:auto;overflow:visible}
+.bt-tip{position:absolute;z-index:6;pointer-events:none;opacity:0;transition:opacity .12s;background:var(--navy);color:#EAF1F9;border-radius:8px;padding:7px 10px;font-size:11px;font-weight:600;box-shadow:0 12px 30px -10px rgba(8,17,30,.5);transform:translate(-50%,calc(-100% - 10px));white-space:nowrap}
+.bt-panel{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:18px 20px;display:flex;flex-direction:column;min-height:392px}
+.bt-def{margin:auto 0;color:var(--muted)}
+.bt-def .mk{font-size:26px;margin-bottom:6px}
+.bt-def h4{font-size:18px;color:var(--ink);margin:0 0 7px;font-weight:650}
+.bt-def p{font-size:13px;margin:0;line-height:1.55;max-width:42ch}
+.bt-def b{color:var(--ink)}
+.bt-eb{font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.bt-eb .d{font-weight:700}
+.bt-eb.sail{color:var(--steel)} .bt-eb.sail .d{color:var(--good)}
+.bt-eb.leak{color:var(--warn)} .bt-eb.leak .d{color:var(--warn)}
+.bt-eb.coach{color:var(--good)}
+.bt-panel h4{font-size:20px;font-weight:650;margin:8px 0 0;line-height:1.15;letter-spacing:-.01em;color:var(--ink)}
+.bt-what{font-size:12.5px;color:var(--muted);margin:6px 0 0;font-style:italic}
+.bt-sec{margin:14px 0 0}
+.bt-sec .l{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-soft);margin-bottom:4px}
+.bt-sec p{font-size:13px;color:var(--ink);margin:0;line-height:1.5}
+.bt-ev{margin:13px 0 0;padding:11px 13px;border-radius:10px;border:1px solid var(--border);background:var(--bg)}
+.bt-ev.sail{border-left:3px solid var(--steel)} .bt-ev.leak{border-left:3px solid var(--warn)}
+.bt-ev .r{font-size:10.5px;font-weight:700;letter-spacing:.03em;color:var(--muted-soft);margin-bottom:4px}
+.bt-ev p{font-size:12.5px;color:var(--ink);margin:0;line-height:1.5}
+.bt-rep{margin:13px 0 0;padding:10px 12px;border-radius:9px;font-size:12px;line-height:1.45;background:var(--warn-bg);color:var(--ink);border:1px solid #EEDACB}
+.bt-rep b{font-weight:700;color:var(--warn)}
+.bt-acts{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.bt-acts button{appearance:none;font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:8px 13px;border-radius:9px}
+.bt-acts .pri{background:var(--steel);color:#fff;border:1px solid var(--steel)}
+.bt-acts .gh{background:transparent;color:var(--ink);border:1px solid var(--border)}
+.bt-acts button:focus-visible{outline:2px solid var(--steel);outline-offset:2px}
+.bt-note{font-size:10.5px;color:var(--muted-soft);margin:12px 0 0;line-height:1.45}
+.bt-hit{cursor:pointer}
+.bt-hit:focus{outline:none}
+.bt-pulse{transform-box:fill-box;transform-origin:center;animation:btpulse 2.4s ease-out infinite}
+@keyframes btpulse{0%{transform:scale(.5);opacity:.6}70%{transform:scale(2);opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.bt-pulse{animation:none;opacity:0}}
+</style>
+<div class="bt-head"><div class="bt-title">Your leadership, as a boat</div><div class="bt-note2">Tap any part — a sail to see how you built it, the leak to see what's next. The lighthouse is your coach.</div></div>
+<div class="bt-stage">
+  <div class="bt-card">
+    <div class="bt-h"><div class="bt-k">After four runs · the story lens</div>
+      <div class="bt-seg" role="group" aria-label="Label vocabulary"><button id="btPlain" aria-pressed="true">Plain</button><button id="btInsider" aria-pressed="false">Insider</button></div>
+    </div>
+    <svg id="btBoat" class="bt-svg" viewBox="0 0 440 392" role="img" aria-label="An interactive sailboat of your six markers: tap the sails, compass, helm, fleet, leak or lighthouse."></svg>
+    <div class="bt-tip" id="btTip"></div>
+  </div>
+  <div class="bt-panel" id="btPanel">
+    <div class="bt-def"><div class="mk">⛵</div><h4>Tap any part of the boat.</h4><p>A full <b>sail</b> shows how you built that strength — cited to the run where it moved, so you can repeat it. The <b>leak</b> (pulsing) is your lowest marker and what to do about it. The <b>lighthouse</b> is your coach.</p></div>
+  </div>
+</div>
+<!-- ============ /SAILBOAT DOORWAY ============ -->
+
 <div class="verdict">
   <div class="vtop">
     <div class="vwho"><div class="avatar">DW</div><div><h1 class="vname">Dana Whitmore</h1><p class="vrole">Fictional participant · four runs · two forthcoming teams, two guarded · played as self throughout</p></div></div>
@@ -1249,7 +1314,7 @@ document.getElementById('revLedger').onclick=()=>{setMode(false);goSec('ledger')
 document.getElementById('revTour').onclick=()=>document.getElementById('tourBtn').click();
 const ct=document.getElementById('coachTab');
 if(ct)ct.onclick=()=>document.body.classList.toggle('coach-open');
-window.LFSgo=goSec;window.LFSshow=show;
+window.LFSgo=goSec;window.LFSshow=show;window.LFSask=ask;
 })();
 </script>
 <script>
@@ -1273,6 +1338,180 @@ window.LFSgo=goSec;window.LFSshow=show;
   let deep=false;
   window.addEventListener('scroll',()=>{if(deep)return;
     if((window.scrollY+innerHeight)/document.body.scrollHeight>0.6){deep=true;lfsTrack('read_60_percent')}},{passive:true});
+})();
+</script>
+<script>
+/* ============ SAILBOAT DOORWAY — engine (added) ============
+   Real Dana data from the fingerprint. Wires into the live coach (window.LFSask),
+   the transcripts (window.gpOpen) and section nav (window.LFSshow). */
+(function(){
+var S='http://www.w3.org/2000/svg';
+var svg=document.getElementById('btBoat'); if(!svg)return;
+function E(t,a,x){var e=document.createElementNS(S,t);for(var k in a)e.setAttribute(k,a[k]);if(x!=null)e.textContent=x;svg.appendChild(e);return e;}
+
+/* six markers — values, deltas and events from the record */
+var P={
+ a4:{name:'Truth-seeking over comfort',kind:'sail',then:59,now:68,plain:'Strength',insider:'Sail',
+   what:'Blunt with 48 of 61 hard messages — the exceptions are one specific population, not a general tendency.',
+   secH:'How you built it',
+   move:'Your largest single-dimension gain, +9 — and it moved because a rep aimed straight at it: “say the one thing I’d normally soften,” kept 28 of 30 days.',
+   run:'r4', runL:'Run 04 · Overdrive',
+   ev:'You told the board chair “we have been running on luck and calling it operational excellence,” and told Rob Vien to stop doctoring the logs “today, not next week.”',
+   act:'Do more of this',
+   actTxt:'Say the hard thing to the person it affects most — even the one your decision has already cost. That is the last 13 of 61.',
+   coachQ:'My truth-seeking went from 59 to 68 — what exactly did I do that moved it, so I can repeat it?'},
+ a2:{name:'Decision calibration',kind:'sail',then:68,now:71,plain:'Strength',insider:'Sail',
+   what:'When you commit, you commit to roughly the right size of move for the evidence in hand.',
+   secH:'How you built it',
+   move:'Up 3 — you size the move to the evidence, and you will act before you have all of it.',
+   run:'r2', runL:'Run 02 · Sennar Ascent',
+   ev:'Day 7 you turned all eleven climbers around at 8,100m without the traverse data — the right-sized call, made under real pressure.',
+   act:'Do more of this',
+   actTxt:'Keep making the reversible call at 70% certainty instead of waiting for 95%.',
+   coachQ:'Tell me about my decision calibration — how I built it and how to keep it.'},
+ a6:{name:'Composure under escalation',kind:'sail',then:81,now:81,plain:'Your read',insider:'Compass',
+   what:'Your language, message length and decision quality do not degrade when the situation does.',
+   secH:'Your quiet strength',
+   move:'Flat at 81 — steady from the start, and it held as the scenarios got harder rather than slipping.',
+   run:'r3', runL:'Run 03 · Blackout',
+   ev:'A cascading grid failure as interim CEO, two weeks of cash at stake — and your calls kept the quality they had at minute one.',
+   act:'Do more of this',
+   actTxt:'Others feel this more than you do. Name it and lend it — be the calm in the room on purpose.',
+   coachQ:'Composure is my steadiest marker — how do I make the most of it?'},
+ a3:{name:'Consultation breadth',kind:'sail',then:86,now:88,plain:'People',insider:'Other boats',
+   what:'You reach people — across four runs you contacted 88% of everyone holding anything material.',
+   secH:'Your biggest strength',
+   move:'Your highest marker. You do not need to learn to talk to people.',
+   run:'r3', runL:'Run 03 · Blackout',
+   ev:'You reached two of the three people holding what you needed — the reach is real and consistent across runs.',
+   act:'Do more of this',
+   actTxt:'Keep the reach — then go the last step to the third person, the one you would normally decide without.',
+   coachQ:'My consultation breadth is 88 — how do I make the most of that strength?'},
+ a5:{name:'Intent–action integrity',kind:'sail',then:51,now:52,plain:'Follow-through',insider:'Helm',
+   what:'The gap between what you said you’d do and what the log shows you did — you named the holder 24 times and went 15.',
+   secH:'Where it stalls',
+   move:'Barely moved, +1 — the rep trained the naming, which was already solved, not the going, which is the actual gap.',
+   run:'r2', runL:'Run 02 · Sennar Ascent',
+   ev:'“Check with Reyes re: the traverse plate” sat in your own notes and survived three planning sessions. No message was ever sent.',
+   act:'The fix',
+   actTxt:'Close the gap between naming and going — go to the person you already named, before you decide.',
+   coachQ:'My intent–action integrity is stuck at 52 — why, and what rep would actually move it?'},
+ a1:{name:'Information-seeking',kind:'leak',then:36,now:44,plain:'Growth edge',insider:'Leak',
+   what:'You reach everyone — and stop at the first answer.',
+   secH:'Why it’s the one to watch',
+   move:'Your lowest marker, and the one the whole profile turns on. In 3 of 4 runs the decisive fact was one further question away from someone you had already spoken to.',
+   run:'r1', runL:'Run 01 · Ridgeline',
+   ev:'Okafor offered the load reconciliation twice; you never opened it. It held the oxygen shortfall that cost the cache.',
+   act:'The fix',
+   actTxt:'Ask the second question — and go to the person who holds what you don’t, before you decide.',
+   rep:'The rep the coach would push: “Each day, go to the one person my last decision cost — before they come to me.”',
+   coachQ:'Information-seeking is my lowest marker — what is actually going on, and what should I do about it?'}
+};
+var CO={plain:'Coach',insider:'Lighthouse',coachQ:'Given all four runs, what is the single most important thing for me to work on next?'};
+var SHORT={a4:'Truth-seeking',a2:'Decision calibration',a6:'Composure',a3:'Consultation',a5:'Intent–action',a1:'Information-seeking'};
+
+/* grounds */
+E('rect',{x:0,y:0,width:440,height:300,fill:'var(--steel-tint)',opacity:.55});
+E('rect',{x:0,y:300,width:440,height:92,fill:'var(--steel-tint-edge)',opacity:.5});
+var wv='M0 300';for(var wx=0;wx<=440;wx+=20)wv+=' Q'+(wx+10)+' '+(298+((wx/20)%2?3:-3))+' '+(wx+20)+' 300';
+E('path',{d:wv,fill:'none',stroke:'var(--steel)','stroke-width':1,opacity:.25});
+
+function sail(pts,pct,op,id){var ax=pts[0][0],ay=pts[0][1],bx=pts[1][0],by=pts[1][1],cx2=pts[2][0],cy2=pts[2][1];
+ var footY=Math.max(by,cy2),topY=ay,hh=footY-topY,ft=footY-hh*pct/100;
+ var out='M'+ax+' '+ay+' L'+bx+' '+by+' L'+cx2+' '+cy2+' Z';
+ E('path',{d:out,fill:'var(--surface)',stroke:'var(--steel)','stroke-width':1.5,'stroke-linejoin':'round',opacity:.94});
+ var clip=E('clipPath',{id:id});var cp=document.createElementNS(S,'path');cp.setAttribute('d',out);clip.appendChild(cp);
+ E('rect',{x:Math.min(ax,bx,cx2)-2,y:ft,width:220,height:footY-ft+2,fill:'var(--steel)',opacity:op,'clip-path':'url(#'+id+')'});}
+
+/* structure + parts */
+E('line',{x1:212,y1:70,x2:212,y2:300,stroke:'var(--gold)','stroke-width':4,'stroke-linecap':'round'});
+E('path',{d:'M118 300 Q150 342 300 336 Q324 332 332 300 Z',fill:'var(--gold)',opacity:.85});
+E('path',{d:'M118 300 Q150 342 300 336 Q324 332 332 300 Z',fill:'none',stroke:'var(--navy)','stroke-width':1,opacity:.25});
+sail([[212,74],[290,286],[212,286]],P.a4.now,.8,'btMain');
+sail([[212,98],[138,286],[212,286]],P.a2.now,.6,'btJib');
+E('circle',{cx:160,cy:312,r:10,fill:'none',stroke:'var(--gold)','stroke-width':2.5});
+for(var av=0;av<6;av++){var th=av*Math.PI/3;E('line',{x1:160,y1:312,x2:160+Math.cos(th)*10,y2:312+Math.sin(th)*10,stroke:'var(--gold)','stroke-width':1.4});}
+E('circle',{cx:266,cy:312,r:11,fill:'var(--surface)',stroke:'var(--gold)','stroke-width':2});
+E('path',{d:'M266 304 L269 312 L266 320 L263 312 Z',fill:'var(--steel)'});
+E('ellipse',{cx:212,cy:328,rx:13,ry:7.5,fill:'var(--warn)',opacity:.85});
+E('path',{d:'M212 335 q-2 8 0 12 M220 335 q2 6 0 10 M204 335 q-1 5 0 9',stroke:'var(--warn)','stroke-width':1.4,fill:'none',opacity:.6,'stroke-linecap':'round'});
+function farboat(x,y,sc){var g=E('g',{transform:'translate('+x+' '+y+') scale('+sc+')'});
+ var h=document.createElementNS(S,'path');h.setAttribute('d','M-14 0 Q0 12 16 0 Z');h.setAttribute('fill','var(--muted-soft)');h.setAttribute('opacity','.7');g.appendChild(h);
+ var m=document.createElementNS(S,'line');m.setAttribute('x1','0');m.setAttribute('y1','0');m.setAttribute('x2','0');m.setAttribute('y2','-20');m.setAttribute('stroke','var(--muted-soft)');m.setAttribute('stroke-width','1.5');g.appendChild(m);
+ var s=document.createElementNS(S,'path');s.setAttribute('d','M0 -19 L11 -3 L0 -3 Z');s.setAttribute('fill','var(--muted-soft)');s.setAttribute('opacity','.5');g.appendChild(s);}
+var fsc=0.5+P.a3.now/300;farboat(66,300,fsc);farboat(102,291,fsc*0.78);
+E('path',{d:'M424 300 L420 250 L432 250 L428 300 Z',fill:'var(--surface)',stroke:'var(--gold)','stroke-width':1.5});
+E('rect',{x:419,y:243,width:14,height:9,rx:1.5,fill:'var(--gold)'});
+E('circle',{cx:426,cy:240,r:3,fill:'var(--good)'});
+E('path',{d:'M426 240 L470 224 L470 256 Z',fill:'var(--good)',opacity:.16});
+
+/* labels */
+var CALL=[{x:256,y:120,tx:290,ty:150,k:'a4'},{x:112,y:150,tx:168,ty:182,k:'a2'},{x:352,y:344,tx:272,ty:320,k:'a6'},{x:88,y:344,tx:158,ty:322,k:'a5'},{x:40,y:284,tx:70,ty:296,k:'a3'},{x:220,y:374,tx:212,ty:336,k:'a1'},{x:426,y:214,tx:426,ty:236,k:'coach'}];
+var labelEls=[];
+CALL.forEach(function(c){
+ E('line',{x1:c.x,y1:c.y,x2:c.tx,y2:c.ty,stroke:'var(--border)','stroke-width':1});
+ var anc=c.x<120?'start':(c.x>320?'end':'middle');
+ var isC=c.k==='coach'; var d=isC?CO:P[c.k];
+ var isL=!isC&&d.kind==='leak';
+ var t1=E('text',{x:c.x,y:c.y,'text-anchor':anc,'font-size':10.5,'font-weight':600,fill:isL?'var(--warn)':(isC?'var(--good)':'var(--ink)')},isC?'The coach':SHORT[c.k]);
+ var cat=E('text',{x:c.x,y:c.y+12,'text-anchor':anc,'font-size':9.5,fill:'var(--muted)'},'');
+ var cw=document.createElementNS(S,'tspan');cw.textContent=d.plain;cat.appendChild(cw);
+ if(!isC){var vv=document.createElementNS(S,'tspan');vv.setAttribute('fill','var(--muted)');vv.textContent='  ·  '+d.now;cat.appendChild(vv);}
+ labelEls.push({cw:cw,plain:d.plain,insider:d.insider});
+ [t1,cat].forEach(function(n){n.style.cursor='pointer';n.addEventListener('click',function(){select(c.k);});});
+});
+
+/* selection ring + pulse */
+var sel=E('circle',{r:0,fill:'none','stroke-width':2.5,opacity:0});
+var FOCUS={a4:[250,176,40],a2:[176,214,38],a6:[266,312,17],a5:[160,312,17],a3:[84,297,26],a1:[212,328,19],coach:[426,270,26]};
+var pulse=E('circle',{cx:212,cy:328,r:15,fill:'none',stroke:'var(--warn)','stroke-width':2,'class':'bt-pulse'});
+
+/* tooltip + hit areas */
+var tip=document.getElementById('btTip');
+function tipShow(k,fx,fy){tip.textContent=(k==='coach')?'The coach — ask about your boat':P[k].name;var r=svg.getBoundingClientRect();tip.style.left=(fx*r.width/440)+'px';tip.style.top=(fy*r.height/392)+'px';tip.style.opacity=1;}
+function tipHide(){tip.style.opacity=0;}
+Object.keys(FOCUS).forEach(function(k){var f=FOCUS[k];
+ var hit=E('circle',{cx:f[0],cy:f[1],r:f[2],fill:'transparent','class':'bt-hit',tabindex:'0',role:'button','aria-label':(k==='coach'?'The coach':P[k].name)});
+ hit.addEventListener('pointerenter',function(){tipShow(k,f[0],f[1]);});
+ hit.addEventListener('pointerleave',tipHide);
+ hit.addEventListener('click',function(){select(k);});
+ hit.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();select(k);}});
+});
+
+/* panel */
+var panel=document.getElementById('btPanel');var started=false,insiderOn=false;
+function focusRing(k){var f=FOCUS[k];var col=k==='coach'?'var(--good)':(P[k].kind==='leak'?'var(--warn)':'var(--steel)');sel.setAttribute('cx',f[0]);sel.setAttribute('cy',f[1]);sel.setAttribute('r',f[2]);sel.setAttribute('stroke',col);sel.setAttribute('opacity',1);}
+function select(k){if(!started){started=true;pulse.style.display='none';}tip.style.opacity=0;focusRing(k);panel.innerHTML=(k==='coach')?coachHome():detail(k);}
+function detail(k){var d=P[k];var leak=d.kind==='leak';var cls=leak?'leak':'sail';var dd=d.now-d.then;var dl=(dd>=0?'+':'')+dd;
+ return ''
+ +'<div class="bt-eb '+cls+'"><span class="pw" data-plain="'+d.plain+'" data-insider="'+d.insider+'">'+(insiderOn?d.insider:d.plain)+'</span><span class="d">'+d.then+' → '+d.now+'  ('+dl+')</span></div>'
+ +'<h4>'+d.name+'</h4>'
+ +'<p class="bt-what">'+d.what+'</p>'
+ +'<div class="bt-sec"><div class="l">'+d.secH+'</div><p>'+d.move+'</p></div>'
+ +'<div class="bt-ev '+cls+'"><div class="r">'+d.runL+'  ·  what you actually did</div><p>“'+d.ev+'”</p></div>'
+ +'<div class="bt-sec"><div class="l">'+d.act+'</div><p>'+d.actTxt+'</p></div>'
+ +((leak&&d.rep)?'<div class="bt-rep"><b>30-day rep</b> · '+d.rep+'</div>':'')
+ +'<div class="bt-acts"><button class="pri" data-act="ask" data-key="'+k+'">Ask the coach →</button>'
+ +(leak?'<button class="gh" data-act="sec" data-sec="rep">Your 30-day rep →</button>':'<button class="gh" data-act="run" data-run="'+d.run+'">Read the moment →</button>')
+ +'</div>'
+ +'<div class="bt-note">Traces observed sim behaviour. The coach reads the full record and will say when the evidence won’t support a claim.</div>';}
+function coachHome(){return ''
+ +'<div class="bt-eb coach"><span class="pw" data-plain="Coach" data-insider="Lighthouse">'+(insiderOn?'Lighthouse':'Coach')+'</span></div>'
+ +'<h4>Your coach</h4>'
+ +'<p class="bt-what">It has read all four runs and holds the whole record. It never grabs the wheel — it marks the harbour and the rocks, and answers what you ask.</p>'
+ +'<div class="bt-acts"><button class="pri" data-act="ask" data-key="coach">What should I work on next? →</button><button class="gh" data-act="ask" data-key="a1">“What’s my leak?” →</button><button class="gh" data-act="ask" data-key="a4">“How did I hit 68?” →</button></div>';}
+
+function askCoach(q){document.body.classList.add('coach-open');if(window.LFSask)window.LFSask(q);var rail=document.querySelector('.rail');if(rail)window.scrollTo({top:rail.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});}
+function openSec(id){var e=document.getElementById(id);if(!e)return;var pane=e.closest('.pane');if(pane&&window.LFSshow)window.LFSshow(pane.dataset.pane);setTimeout(function(){e.scrollIntoView({behavior:'smooth',block:'start'});},30);}
+panel.addEventListener('click',function(e){var b=e.target.closest('[data-act]');if(!b)return;var act=b.dataset.act;
+ if(act==='ask'){var k=b.dataset.key;askCoach(k==='coach'?CO.coachQ:P[k].coachQ);}
+ else if(act==='run'){if(window.gpOpen)window.gpOpen(b.dataset.run);}
+ else if(act==='sec'){openSec(b.dataset.sec);}});
+
+/* vocabulary toggle */
+var pB=document.getElementById('btPlain'),iB=document.getElementById('btInsider');
+function setV(on){insiderOn=on;labelEls.forEach(function(l){l.cw.textContent=on?l.insider:l.plain;});var pw=panel.querySelector('.pw');if(pw)pw.textContent=on?pw.dataset.insider:pw.dataset.plain;pB.setAttribute('aria-pressed',String(!on));iB.setAttribute('aria-pressed',String(on));}
+pB.onclick=function(){setV(false);};iB.onclick=function(){setV(true);};
 })();
 </script>
 </body>
