@@ -580,16 +580,17 @@ body.touring{padding-bottom:90px}
 #btBoat text{font-family:'Inter',-apple-system,sans-serif}
 #btBoat .n{font-family:var(--mono);font-weight:600;fill:#0C2340}
 #btBoat .n.lk{fill:var(--leak)}
-#btBoat .nm{font-size:14px;font-weight:600;fill:#16324F}
+#btBoat .nm{font-size:19px;font-weight:600;fill:#16324F}
 #btBoat .nm.lk{fill:var(--leak)}
-#btBoat .s{font-family:var(--mono);font-size:10px;letter-spacing:.06em;fill:#5C728B}
+#btBoat .s{font-family:var(--mono);font-size:14px;letter-spacing:.04em;fill:#5C728B}
 #btBoat .s.lk{fill:var(--leak)}
 #btBoat .chip{font-weight:700;fill:var(--leak)}
 #btBoat .part{cursor:pointer;transition:opacity .15s}
 #btBoat .part.dim{opacity:.34}
-#btBoat .legend text{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;fill:#8894A6}
-#btBoat .subcap{font-family:var(--mono);font-size:10px;letter-spacing:.11em;fill:#A0AAB8}
-#btBoat .foot{fill:#5C728B;font-size:12.5px}
+#btBoat .part:focus{outline:none}
+#btBoat .legend text{font-family:var(--mono);font-size:12px;letter-spacing:.08em;fill:#8894A6}
+#btBoat .subcap{font-family:var(--mono);font-size:12.5px;letter-spacing:.09em;fill:#A0AAB8}
+#btBoat .foot{fill:#5C728B;font-size:15px}
 .bt-mlegend{display:none;flex-direction:column;gap:0;margin-top:10px}
 .bt-mlr{display:flex;align-items:baseline;gap:8px;padding:8px 2px;border-top:1px solid var(--border)}
 .bt-mlr:first-child{border-top:0}
@@ -1625,7 +1626,7 @@ var BT_SVG=`<defs>
 <g class="part" data-key="a6"><circle cx="704" cy="190" r="30" fill="#EEF3F9" stroke="#6E90B8" stroke-width="1.4"/><g stroke="#6E90B8" stroke-width="1" opacity=".6"><line x1="704" y1="164" x2="704" y2="170"/><line x1="704" y1="210" x2="704" y2="216"/><line x1="678" y1="190" x2="684" y2="190"/><line x1="724" y1="190" x2="730" y2="190"/></g><line x1="704" y1="190" x2="720" y2="176" stroke="#C85A25" stroke-width="2" stroke-linecap="round"/><line x1="704" y1="190" x2="695" y2="200" stroke="#21507F" stroke-width="2" stroke-linecap="round"/><circle cx="704" cy="190" r="2.4" fill="#0C2340"/><text class="n" x="704" y="250" font-size="20" text-anchor="middle">81</text></g>
 <g class="part" data-key="a5"><g transform="translate(650,430)" stroke="#6E90B8" stroke-width="1.6" fill="none"><circle r="19"/><circle r="6" fill="#EEF3F9"/><line x1="0" y1="-19" x2="0" y2="-26"/><line x1="0" y1="19" x2="0" y2="26"/><line x1="-19" y1="0" x2="-26" y2="0"/><line x1="19" y1="0" x2="26" y2="0"/><line x1="-13.4" y1="-13.4" x2="-18.4" y2="-18.4"/><line x1="13.4" y1="-13.4" x2="18.4" y2="-18.4"/><line x1="-13.4" y1="13.4" x2="-18.4" y2="18.4"/><line x1="13.4" y1="13.4" x2="18.4" y2="18.4"/></g><circle cx="650" cy="430" r="2.4" fill="#0C2340"/><text class="n" x="650" y="392" font-size="20" text-anchor="middle">52</text></g>
 <g class="part" data-key="a3"><g stroke="#6E90B8" stroke-width="1.4" fill="none" stroke-linejoin="round"><polygon points="700,438 726,438 720,450 706,450"/><line x1="713" y1="418" x2="713" y2="438"/><path d="M713 420 L724 436 L713 436 Z" fill="rgba(33,80,127,.10)"/><polygon points="730,446 752,446 747,456 735,456"/><line x1="741" y1="430" x2="741" y2="446"/><path d="M741 432 L750 444 L741 444 Z" fill="rgba(33,80,127,.10)"/></g><text class="n" x="712" y="410" font-size="20" text-anchor="middle">88</text></g>
-<g class="part" data-key="coach"><polygon points="186,384 520,244 506,438" fill="url(#beam)"/><path d="M140 470 Q146 460 168 460 L196 460 Q214 460 220 470 Z" fill="#EEF3F9" stroke="#6E90B8" stroke-width="1"/><polygon points="160,462 200,462 192,390 168,390" fill="#F6F9FC" stroke="#21507F" stroke-width="1.4"/><line x1="167" y1="422" x2="193" y2="422" stroke="#6E90B8" stroke-width="4" opacity=".55"/><line x1="165" y1="446" x2="195" y2="446" stroke="#6E90B8" stroke-width="4" opacity=".55"/><rect x="165" y="378" width="30" height="13" fill="#EEF3F9" stroke="#21507F" stroke-width="1.2"/><path d="M166 378 L180 365 L194 378 Z" fill="#21507F"/><line x1="180" y1="365" x2="180" y2="359" stroke="#21507F" stroke-width="1.4"/><circle cx="180" cy="384" r="9" fill="#F0C24E" opacity=".45"/><circle cx="180" cy="384" r="4" fill="#E7A72E"/></g>
+<polygon points="186,384 520,244 506,438" fill="url(#beam)" pointer-events="none"/><g class="part" data-key="coach"><path d="M140 470 Q146 460 168 460 L196 460 Q214 460 220 470 Z" fill="#EEF3F9" stroke="#6E90B8" stroke-width="1"/><polygon points="160,462 200,462 192,390 168,390" fill="#F6F9FC" stroke="#21507F" stroke-width="1.4"/><line x1="167" y1="422" x2="193" y2="422" stroke="#6E90B8" stroke-width="4" opacity=".55"/><line x1="165" y1="446" x2="195" y2="446" stroke="#6E90B8" stroke-width="4" opacity=".55"/><rect x="165" y="378" width="30" height="13" fill="#EEF3F9" stroke="#21507F" stroke-width="1.2"/><path d="M166 378 L180 365 L194 378 Z" fill="#21507F"/><line x1="180" y1="365" x2="180" y2="359" stroke="#21507F" stroke-width="1.4"/><circle cx="180" cy="384" r="9" fill="#F0C24E" opacity=".45"/><circle cx="180" cy="384" r="4" fill="#E7A72E"/></g>
 <g class="bt-call"><text class="nm" x="150" y="236">Decision calibration</text><text class="s" x="150" y="255"><tspan class="pw" data-ins="JIB" data-plain="STRENGTH">STRENGTH</tspan> &#183; 71 &#183; +3 &#9650;</text><line x1="180" y1="266" x2="180" y2="300" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/><line x1="180" y1="300" x2="424" y2="300" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/></g>
 <g class="bt-call"><line x1="180" y1="464" x2="180" y2="502" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/><text class="nm" x="126" y="516">The coach</text><text class="s" x="126" y="535"><tspan class="pw" data-ins="LIGHTHOUSE" data-plain="YOUR GUIDE">YOUR GUIDE</tspan> &#183; GROUNDED &#183; CITES ONLY</text></g>
 <g class="bt-call"><text class="nm" x="760" y="184">Composure under escalation</text><text class="s" x="760" y="203"><tspan class="pw" data-ins="COMPASS" data-plain="YOUR READ">YOUR READ</tspan> &#183; 81 &#183; 0 &mdash;</text></g>
@@ -1653,6 +1654,8 @@ svg.querySelectorAll('.part[data-key]').forEach(function(g){var k=g.getAttribute
  g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();select(k);}});
  g.addEventListener('pointerenter',function(){dim(k);});
  g.addEventListener('pointerleave',function(){dim(curSel);});
+ g.addEventListener('focus',function(){dim(k);});
+ g.addEventListener('blur',function(){dim(curSel);});
 });
 
 /* mobile (≤620px): crop the viewBox to the boat + a compact HTML legend below it */
