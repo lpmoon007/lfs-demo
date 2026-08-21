@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="A sample leadership profile after twelve scenarios — transcripts, overturned claims, and a live coach you can try to catch out." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <!-- ANALYTICS — replace the two IDs, then the page reports itself.
      GA_ID      = Google Analytics 4 measurement ID (G-XXXXXXXXXX)
      CLARITY_ID = Microsoft Clarity project ID
@@ -38,7 +38,7 @@ function lfsTrack(name,params){
 }
 </script>
 <style>
-:root{--navy:#0C2340;--steel:#185FA5;--steel-deep:#134C84;--bg:#EEF0F3;--surface:#FFFFFF;--stage:#0E1D31;--border:#E1E4EA;--border-d:rgba(255,255,255,.09);--muted:#6B7480;--muted-soft:#8E97A3;--ink:#1B2733;--warn:#C46A3D;--warn-bg:#FBF1E9;--good:#2F8A5B;--good-bg:#EAF5EE;--steel-tint:#EAF1F9;--steel-tint-edge:#CFE0F1;--gold:#8A6D2F;--gold-bg:#F8F3E7}
+:root{--navy:#0C2340;--steel:#185FA5;--steel-deep:#134C84;--bg:#EEF2F7;--surface:#FFFFFF;--stage:#0E1D31;--border:#E1E4EA;--border-d:rgba(255,255,255,.09);--muted:#6B7480;--muted-soft:#8E97A3;--ink:#1B2733;--warn:#C46A3D;--warn-bg:#FBF1E9;--good:#2F8A5B;--good-bg:#EAF5EE;--steel-tint:#EAF1F9;--steel-tint-edge:#CFE0F1;--gold:#8A6D2F;--gold-bg:#F8F3E7;--leak:#C85A25;--leak-soft:#E7A06F;--mono:'JetBrains Mono',ui-monospace,monospace}
 *{box-sizing:border-box}html,body{margin:0;padding:0}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
 a{color:var(--steel-deep);text-decoration:none}a:hover{color:var(--steel)}
@@ -530,8 +530,9 @@ body.touring{padding-bottom:90px}
 .bt-head{margin:4px 0 12px}
 .bt-title{font-size:19px;font-weight:650;letter-spacing:-.01em;color:var(--ink)}
 .bt-note2{font-size:12px;color:var(--muted-soft);margin-top:3px}
-.bt-stage{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(300px,.94fr);gap:18px;align-items:stretch}
-@media(max-width:900px){.bt-stage{grid-template-columns:1fr}}
+.bt-stage{display:grid;grid-template-columns:1fr;gap:18px;align-items:stretch}
+.bt-panel{max-width:none}
+@media(min-width:901px){.bt-panel .bt-acts{max-width:640px}}
 .bt-card{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:16px 18px;position:relative}
 .bt-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:2px}
 .bt-k{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-soft)}
@@ -541,7 +542,7 @@ body.touring{padding-bottom:90px}
 .bt-seg button:focus-visible{outline:2px solid var(--steel);outline-offset:-2px}
 .bt-svg{display:block;width:100%;height:auto;overflow:visible}
 .bt-tip{position:absolute;z-index:6;pointer-events:none;opacity:0;transition:opacity .12s;background:var(--navy);color:#EAF1F9;border-radius:8px;padding:7px 10px;font-size:11px;font-weight:600;box-shadow:0 12px 30px -10px rgba(8,17,30,.5);transform:translate(-50%,calc(-100% - 10px));white-space:nowrap}
-.bt-panel{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:18px 20px;display:flex;flex-direction:column;min-height:392px}
+.bt-panel{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:18px 20px;display:flex;flex-direction:column;min-height:0}
 .bt-def{margin:auto 0;color:var(--muted)}
 .bt-def .mk{font-size:26px;margin-bottom:6px}
 .bt-def h4{font-size:18px;color:var(--ink);margin:0 0 7px;font-weight:650}
@@ -550,7 +551,7 @@ body.touring{padding-bottom:90px}
 .bt-eb{font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 .bt-eb .d{font-weight:700}
 .bt-eb.sail{color:var(--steel)} .bt-eb.sail .d{color:var(--good)}
-.bt-eb.leak{color:var(--warn)} .bt-eb.leak .d{color:var(--warn)}
+.bt-eb.leak{color:var(--leak)} .bt-eb.leak .d{color:var(--leak)}
 .bt-eb.coach{color:var(--good)}
 .bt-panel h4{font-size:20px;font-weight:650;margin:8px 0 0;line-height:1.15;letter-spacing:-.01em;color:var(--ink)}
 .bt-what{font-size:12.5px;color:var(--muted);margin:6px 0 0;font-style:italic}
@@ -558,11 +559,11 @@ body.touring{padding-bottom:90px}
 .bt-sec .l{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-soft);margin-bottom:4px}
 .bt-sec p{font-size:13px;color:var(--ink);margin:0;line-height:1.5}
 .bt-ev{margin:13px 0 0;padding:11px 13px;border-radius:10px;border:1px solid var(--border);background:var(--bg)}
-.bt-ev.sail{border-left:3px solid var(--steel)} .bt-ev.leak{border-left:3px solid var(--warn)}
+.bt-ev.sail{border-left:3px solid var(--steel)} .bt-ev.leak{border-left:3px solid var(--leak)}
 .bt-ev .r{font-size:10.5px;font-weight:700;letter-spacing:.03em;color:var(--muted-soft);margin-bottom:4px}
 .bt-ev p{font-size:12.5px;color:var(--ink);margin:0;line-height:1.5}
 .bt-rep{margin:13px 0 0;padding:10px 12px;border-radius:9px;font-size:12px;line-height:1.45;background:var(--warn-bg);color:var(--ink);border:1px solid #EEDACB}
-.bt-rep b{font-weight:700;color:var(--warn)}
+.bt-rep b{font-weight:700;color:var(--leak)}
 .bt-acts{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
 .bt-acts button{appearance:none;font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:8px 13px;border-radius:9px}
 .bt-acts .pri{background:var(--steel);color:#fff;border:1px solid var(--steel)}
@@ -574,6 +575,33 @@ body.touring{padding-bottom:90px}
 .bt-pulse{transform-box:fill-box;transform-origin:center;animation:btpulse 2.4s ease-out infinite}
 @keyframes btpulse{0%{transform:scale(.5);opacity:.6}70%{transform:scale(2);opacity:0}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.bt-pulse{animation:none;opacity:0}}
+/* ---- light sailboat register (retrofit to match the TeamLFS profile) ---- */
+.bt-card{background:linear-gradient(180deg,#FFFFFF,#F4F8FC);border-color:#E1E7F0}
+#btBoat text{font-family:'Inter',-apple-system,sans-serif}
+#btBoat .n{font-family:var(--mono);font-weight:600;fill:#0C2340}
+#btBoat .n.lk{fill:var(--leak)}
+#btBoat .nm{font-size:14px;font-weight:600;fill:#16324F}
+#btBoat .nm.lk{fill:var(--leak)}
+#btBoat .s{font-family:var(--mono);font-size:10px;letter-spacing:.06em;fill:#5C728B}
+#btBoat .s.lk{fill:var(--leak)}
+#btBoat .chip{font-weight:700;fill:var(--leak)}
+#btBoat .part{cursor:pointer;transition:opacity .15s}
+#btBoat .part.dim{opacity:.34}
+#btBoat .legend text{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;fill:#8894A6}
+#btBoat .subcap{font-family:var(--mono);font-size:10px;letter-spacing:.11em;fill:#A0AAB8}
+#btBoat .foot{fill:#5C728B;font-size:12.5px}
+.bt-mlegend{display:none;flex-direction:column;gap:0;margin-top:10px}
+.bt-mlr{display:flex;align-items:baseline;gap:8px;padding:8px 2px;border-top:1px solid var(--border)}
+.bt-mlr:first-child{border-top:0}
+.bt-mlr .mn{font-size:13px;font-weight:600;color:var(--ink)}
+.bt-mlr .mw{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:#8894A6}
+.bt-mlr .mv{font-family:var(--mono);font-size:13px;color:#16324F;margin-left:auto;white-space:nowrap}
+.bt-mlr.leak .mn,.bt-mlr.leak .mv{color:var(--leak)}
+.bt-mnote{font-size:11.5px;color:var(--muted-soft);margin-top:9px;line-height:1.5}
+@media(max-width:620px){
+  .bt-mlegend{display:flex}
+  #btBoat .bt-call,#btBoat .subcap,#btBoat .foot,#btBoat .legend{display:none}
+}
 </style>
 <div class="bt-head"><div class="bt-title">Your leadership, as a boat</div><div class="bt-note2">Tap any part — a sail to see how you built it, the leak to see what's next. The lighthouse is your coach.</div></div>
 <div class="bt-stage">
@@ -581,8 +609,9 @@ body.touring{padding-bottom:90px}
     <div class="bt-h"><div class="bt-k">After twelve runs · the story lens</div>
       <div class="bt-seg" role="group" aria-label="Label vocabulary"><button id="btPlain" aria-pressed="true">Plain</button><button id="btInsider" aria-pressed="false">Insider</button></div>
     </div>
-    <svg id="btBoat" class="bt-svg" viewBox="0 0 440 392" role="img" aria-label="An interactive sailboat of your six markers: tap the sails, compass, helm, fleet, leak or lighthouse."></svg>
+    <svg id="btBoat" class="bt-svg" viewBox="0 0 1040 680" role="img" aria-label="An interactive sailboat of your six markers: tap the sails, compass, helm, fleet, hull or lighthouse."></svg>
     <div class="bt-tip" id="btTip"></div>
+    <div class="bt-mlegend" id="btMobLegend"></div>
   </div>
   <div class="bt-panel" id="btPanel">
     <div class="bt-def"><div class="mk">⛵</div><h4>Tap any part of the boat.</h4><p>A full <b>sail</b> shows how you built that strength — cited to the run where it moved, so you can repeat it. The <b>leak</b> (pulsing) is your lowest marker and what to do about it. The <b>lighthouse</b> is your coach.</p></div>
@@ -1579,78 +1608,67 @@ var P={
 var CO={plain:'Coach',insider:'Lighthouse',coachQ:'Given all twelve runs, what is the single most important thing for me to work on next?'};
 var SHORT={a4:'Truth-seeking',a2:'Decision calibration',a6:'Composure',a3:'Consultation',a5:'Intent–action',a1:'Information-seeking'};
 
-/* grounds */
-E('rect',{x:0,y:0,width:440,height:300,fill:'var(--steel-tint)',opacity:.55});
-E('rect',{x:0,y:300,width:440,height:92,fill:'var(--steel-tint-edge)',opacity:.5});
-var wv='M0 300';for(var wx=0;wx<=440;wx+=20)wv+=' Q'+(wx+10)+' '+(298+((wx/20)%2?3:-3))+' '+(wx+20)+' 300';
-E('path',{d:wv,fill:'none',stroke:'var(--steel)','stroke-width':1,opacity:.25});
+/* ---- draw the light sailboat (register match to the TeamLFS profile) ---- */
+var BT_SVG=`<defs>
+<clipPath id="cMain"><rect x="470" y="225" width="180" height="209"/></clipPath>
+<clipPath id="cJib"><rect x="352" y="232" width="130" height="200"/></clipPath>
+<linearGradient id="beam" x1="188" y1="382" x2="512" y2="316" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F0C24E" stop-opacity=".34"/><stop offset="1" stop-color="#F0C24E" stop-opacity="0"/></linearGradient>
+</defs>
+<g stroke="#A9BED6" stroke-width="1" stroke-dasharray="4 5" opacity=".8" fill="none"><line x1="472" y1="120" x2="356" y2="432"/><line x1="472" y1="120" x2="636" y2="434"/><line x1="472" y1="126" x2="632" y2="434"/></g>
+<path d="M330 480 q22 -8 44 0 t44 0 t44 0 t44 0 t44 0 t44 0 t44 0 t44 0" stroke="#7FA0C4" stroke-width="1.4" opacity=".7" fill="none"/>
+<g stroke="#A9BED6" opacity=".7" stroke-width="1"><line x1="350" y1="486" x2="344" y2="496"/><line x1="386" y1="486" x2="380" y2="496"/><line x1="422" y1="486" x2="416" y2="496"/><line x1="458" y1="486" x2="452" y2="496"/><line x1="494" y1="486" x2="488" y2="496"/><line x1="530" y1="486" x2="524" y2="496"/><line x1="566" y1="486" x2="560" y2="496"/><line x1="602" y1="486" x2="596" y2="496"/><line x1="638" y1="486" x2="632" y2="496"/></g>
+<g stroke="#21507F" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"><line x1="472" y1="116" x2="472" y2="436"/><line x1="472" y1="436" x2="636" y2="436"/><polygon points="348,436 672,436 636,472 384,472" fill="rgba(33,80,127,.05)"/></g>
+<circle cx="472" cy="116" r="3.4" fill="#21507F"/>
+<g class="part" data-key="a2"><polygon points="466,150 356,432 468,434" fill="#E6EEF7"/><g clip-path="url(#cJib)"><polygon points="466,150 356,432 468,434" fill="#6F9AD0" opacity=".92"/></g><polygon points="466,150 356,432 468,434" fill="none" stroke="#6E90B8" stroke-width="1.3"/><text class="n" x="410" y="366" font-size="23" text-anchor="middle">71</text></g>
+<g class="part" data-key="a4"><polygon points="472,126 632,434 472,434" fill="#E6EEF7"/><g clip-path="url(#cMain)"><polygon points="472,126 632,434 472,434" fill="#6F9AD0" opacity=".95"/></g><polygon points="472,126 632,434 472,434" fill="none" stroke="#6E90B8" stroke-width="1.3"/><text class="n" x="548" y="312" font-size="27" text-anchor="middle">68</text></g>
+<g class="part" data-key="a1"><line x1="402" y1="472" x2="402" y2="560" stroke="#C85A25" stroke-width="1.2" stroke-dasharray="3 4"/><ellipse cx="402" cy="470" rx="9" ry="5" fill="#C85A25"/><circle cx="398" cy="484" r="2.6" fill="#C85A25" opacity=".8"/><circle cx="407" cy="493" r="2.2" fill="#C85A25" opacity=".6"/><text class="n lk" x="452" y="474" font-size="22">44</text></g>
+<g class="part" data-key="a6"><circle cx="704" cy="190" r="30" fill="#EEF3F9" stroke="#6E90B8" stroke-width="1.4"/><g stroke="#6E90B8" stroke-width="1" opacity=".6"><line x1="704" y1="164" x2="704" y2="170"/><line x1="704" y1="210" x2="704" y2="216"/><line x1="678" y1="190" x2="684" y2="190"/><line x1="724" y1="190" x2="730" y2="190"/></g><line x1="704" y1="190" x2="720" y2="176" stroke="#C85A25" stroke-width="2" stroke-linecap="round"/><line x1="704" y1="190" x2="695" y2="200" stroke="#21507F" stroke-width="2" stroke-linecap="round"/><circle cx="704" cy="190" r="2.4" fill="#0C2340"/><text class="n" x="704" y="250" font-size="20" text-anchor="middle">81</text></g>
+<g class="part" data-key="a5"><g transform="translate(650,430)" stroke="#6E90B8" stroke-width="1.6" fill="none"><circle r="19"/><circle r="6" fill="#EEF3F9"/><line x1="0" y1="-19" x2="0" y2="-26"/><line x1="0" y1="19" x2="0" y2="26"/><line x1="-19" y1="0" x2="-26" y2="0"/><line x1="19" y1="0" x2="26" y2="0"/><line x1="-13.4" y1="-13.4" x2="-18.4" y2="-18.4"/><line x1="13.4" y1="-13.4" x2="18.4" y2="-18.4"/><line x1="-13.4" y1="13.4" x2="-18.4" y2="18.4"/><line x1="13.4" y1="13.4" x2="18.4" y2="18.4"/></g><circle cx="650" cy="430" r="2.4" fill="#0C2340"/><text class="n" x="650" y="392" font-size="20" text-anchor="middle">52</text></g>
+<g class="part" data-key="a3"><g stroke="#6E90B8" stroke-width="1.4" fill="none" stroke-linejoin="round"><polygon points="700,438 726,438 720,450 706,450"/><line x1="713" y1="418" x2="713" y2="438"/><path d="M713 420 L724 436 L713 436 Z" fill="rgba(33,80,127,.10)"/><polygon points="730,446 752,446 747,456 735,456"/><line x1="741" y1="430" x2="741" y2="446"/><path d="M741 432 L750 444 L741 444 Z" fill="rgba(33,80,127,.10)"/></g><text class="n" x="712" y="410" font-size="20" text-anchor="middle">88</text></g>
+<g class="part" data-key="coach"><polygon points="186,384 520,244 506,438" fill="url(#beam)"/><path d="M140 470 Q146 460 168 460 L196 460 Q214 460 220 470 Z" fill="#EEF3F9" stroke="#6E90B8" stroke-width="1"/><polygon points="160,462 200,462 192,390 168,390" fill="#F6F9FC" stroke="#21507F" stroke-width="1.4"/><line x1="167" y1="422" x2="193" y2="422" stroke="#6E90B8" stroke-width="4" opacity=".55"/><line x1="165" y1="446" x2="195" y2="446" stroke="#6E90B8" stroke-width="4" opacity=".55"/><rect x="165" y="378" width="30" height="13" fill="#EEF3F9" stroke="#21507F" stroke-width="1.2"/><path d="M166 378 L180 365 L194 378 Z" fill="#21507F"/><line x1="180" y1="365" x2="180" y2="359" stroke="#21507F" stroke-width="1.4"/><circle cx="180" cy="384" r="9" fill="#F0C24E" opacity=".45"/><circle cx="180" cy="384" r="4" fill="#E7A72E"/></g>
+<g class="bt-call"><text class="nm" x="150" y="236">Decision calibration</text><text class="s" x="150" y="255"><tspan class="pw" data-ins="JIB" data-plain="STRENGTH">STRENGTH</tspan> &#183; 71 &#183; +3 &#9650;</text><line x1="180" y1="266" x2="180" y2="300" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/><line x1="180" y1="300" x2="424" y2="300" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/></g>
+<g class="bt-call"><line x1="180" y1="464" x2="180" y2="502" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/><text class="nm" x="126" y="516">The coach</text><text class="s" x="126" y="535"><tspan class="pw" data-ins="LIGHTHOUSE" data-plain="YOUR GUIDE">YOUR GUIDE</tspan> &#183; GROUNDED &#183; CITES ONLY</text></g>
+<g class="bt-call"><text class="nm" x="760" y="184">Composure under escalation</text><text class="s" x="760" y="203"><tspan class="pw" data-ins="COMPASS" data-plain="YOUR READ">YOUR READ</tspan> &#183; 81 &#183; 0 &mdash;</text></g>
+<g class="bt-call"><line x1="596" y1="300" x2="754" y2="300" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/><text class="nm" x="762" y="300">Truth-seeking over comfort</text><text class="s" x="762" y="319"><tspan class="pw" data-ins="MAINSAIL" data-plain="STRENGTH">STRENGTH</tspan> &#183; 68 &#183; +9 &#9650;</text></g>
+<g class="bt-call"><line x1="676" y1="424" x2="754" y2="418" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/><text class="nm" x="762" y="418">Intent&ndash;action integrity</text><text class="s" x="762" y="437"><tspan class="pw" data-ins="HELM" data-plain="FOLLOW-THROUGH">FOLLOW-THROUGH</tspan> &#183; 52 &#183; +1 &#9650;</text></g>
+<g class="bt-call"><line x1="745" y1="450" x2="754" y2="502" stroke="#A9BED6" stroke-width="1" stroke-dasharray="3 4"/><text class="nm" x="762" y="502">Consultation breadth</text><text class="s" x="762" y="521"><tspan class="pw" data-ins="FLEET" data-plain="PEOPLE">PEOPLE</tspan> &#183; 88 &#183; +2 &#9650;</text></g>
+<g class="bt-call"><text class="nm lk" x="402" y="586" text-anchor="middle">Information-seeking</text><text class="s lk" x="402" y="605" text-anchor="middle"><tspan class="pw" data-ins="THE HULL" data-plain="INTAKE">INTAKE</tspan> &#183; 44 &#183; +8 &#9650;<tspan class="chip"> &#183; THE LEAK</tspan></text></g>
+<text class="subcap" x="60" y="556">SAIL FILL = MARKER RATE &#183; DIFFICULTY-NORMALISED &#183; R12 OF 12</text>
+<text class="foot" x="60" y="632"><tspan font-weight="600" fill="#16324F">The leak is your lowest marker.</tspan></text>
+<text class="foot" x="60" y="651">Fill gives the gestalt in a glance; the number does the reading.</text>
+<g class="legend"><line x1="720" y1="628" x2="748" y2="628" stroke="#21507F" stroke-width="2"/><text x="754" y="632">MEASURED</text><line x1="838" y1="628" x2="866" y2="628" stroke="#A9BED6" stroke-width="1.4" stroke-dasharray="4 4"/><text x="872" y="632">CONSTRUCTION</text><line x1="720" y1="650" x2="748" y2="650" stroke="#C85A25" stroke-width="2"/><text x="754" y="654">THE LEAK</text></g>`;
+svg.innerHTML=BT_SVG;
 
-function sail(pts,pct,op,id){var ax=pts[0][0],ay=pts[0][1],bx=pts[1][0],by=pts[1][1],cx2=pts[2][0],cy2=pts[2][1];
- var footY=Math.max(by,cy2),topY=ay,hh=footY-topY,ft=footY-hh*pct/100;
- var out='M'+ax+' '+ay+' L'+bx+' '+by+' L'+cx2+' '+cy2+' Z';
- E('path',{d:out,fill:'var(--surface)',stroke:'var(--steel)','stroke-width':1.5,'stroke-linejoin':'round',opacity:.94});
- var clip=E('clipPath',{id:id});var cp=document.createElementNS(S,'path');cp.setAttribute('d',out);clip.appendChild(cp);
- E('rect',{x:Math.min(ax,bx,cx2)-2,y:ft,width:220,height:footY-ft+2,fill:'var(--steel)',opacity:op,'clip-path':'url(#'+id+')'});}
+/* dynamic leak = the lowest scored marker (argmin); shown identically everywhere */
+var scored=['a4','a2','a6','a3','a5','a1'].filter(function(k){return typeof P[k].now==='number';});
+var leakKey=scored.reduce(function(m,k){return P[k].now<P[m].now?k:m;},scored[0]);
+svg.querySelectorAll('.part[data-key]').forEach(function(g){var k=g.getAttribute('data-key');var num=g.querySelector('.n');if(num)num.classList.toggle('lk',k===leakKey);});
 
-/* structure + parts */
-E('line',{x1:212,y1:70,x2:212,y2:300,stroke:'var(--gold)','stroke-width':4,'stroke-linecap':'round'});
-E('path',{d:'M118 300 Q150 342 300 336 Q324 332 332 300 Z',fill:'var(--gold)',opacity:.85});
-E('path',{d:'M118 300 Q150 342 300 336 Q324 332 332 300 Z',fill:'none',stroke:'var(--navy)','stroke-width':1,opacity:.25});
-sail([[212,74],[290,286],[212,286]],P.a4.now,.8,'btMain');
-sail([[212,98],[138,286],[212,286]],P.a2.now,.6,'btJib');
-E('circle',{cx:160,cy:312,r:10,fill:'none',stroke:'var(--gold)','stroke-width':2.5});
-for(var av=0;av<6;av++){var th=av*Math.PI/3;E('line',{x1:160,y1:312,x2:160+Math.cos(th)*10,y2:312+Math.sin(th)*10,stroke:'var(--gold)','stroke-width':1.4});}
-E('circle',{cx:266,cy:312,r:11,fill:'var(--surface)',stroke:'var(--gold)','stroke-width':2});
-E('path',{d:'M266 304 L269 312 L266 320 L263 312 Z',fill:'var(--steel)'});
-E('ellipse',{cx:212,cy:328,rx:13,ry:7.5,fill:'var(--warn)',opacity:.85});
-E('path',{d:'M212 335 q-2 8 0 12 M220 335 q2 6 0 10 M204 335 q-1 5 0 9',stroke:'var(--warn)','stroke-width':1.4,fill:'none',opacity:.6,'stroke-linecap':'round'});
-function farboat(x,y,sc){var g=E('g',{transform:'translate('+x+' '+y+') scale('+sc+')'});
- var h=document.createElementNS(S,'path');h.setAttribute('d','M-14 0 Q0 12 16 0 Z');h.setAttribute('fill','var(--muted-soft)');h.setAttribute('opacity','.7');g.appendChild(h);
- var m=document.createElementNS(S,'line');m.setAttribute('x1','0');m.setAttribute('y1','0');m.setAttribute('x2','0');m.setAttribute('y2','-20');m.setAttribute('stroke','var(--muted-soft)');m.setAttribute('stroke-width','1.5');g.appendChild(m);
- var s=document.createElementNS(S,'path');s.setAttribute('d','M0 -19 L11 -3 L0 -3 Z');s.setAttribute('fill','var(--muted-soft)');s.setAttribute('opacity','.5');g.appendChild(s);}
-var fsc=0.5+P.a3.now/300;farboat(66,300,fsc);farboat(102,291,fsc*0.78);
-E('path',{d:'M424 300 L420 250 L432 250 L428 300 Z',fill:'var(--surface)',stroke:'var(--gold)','stroke-width':1.5});
-E('rect',{x:419,y:243,width:14,height:9,rx:1.5,fill:'var(--gold)'});
-E('circle',{cx:426,cy:240,r:3,fill:'var(--good)'});
-E('path',{d:'M426 240 L470 224 L470 256 Z',fill:'var(--good)',opacity:.16});
-
-/* labels */
-var CALL=[{x:256,y:120,tx:290,ty:150,k:'a4'},{x:112,y:150,tx:168,ty:182,k:'a2'},{x:352,y:344,tx:272,ty:320,k:'a6'},{x:88,y:344,tx:158,ty:322,k:'a5'},{x:40,y:284,tx:70,ty:296,k:'a3'},{x:220,y:374,tx:212,ty:336,k:'a1'},{x:426,y:214,tx:426,ty:236,k:'coach'}];
-var labelEls=[];
-CALL.forEach(function(c){
- E('line',{x1:c.x,y1:c.y,x2:c.tx,y2:c.ty,stroke:'var(--border)','stroke-width':1});
- var anc=c.x<120?'start':(c.x>320?'end':'middle');
- var isC=c.k==='coach'; var d=isC?CO:P[c.k];
- var isL=!isC&&d.kind==='leak';
- var t1=E('text',{x:c.x,y:c.y,'text-anchor':anc,'font-size':10.5,'font-weight':600,fill:isL?'var(--warn)':(isC?'var(--good)':'var(--ink)')},isC?'The coach':SHORT[c.k]);
- var cat=E('text',{x:c.x,y:c.y+12,'text-anchor':anc,'font-size':9.5,fill:'var(--muted)'},'');
- var cw=document.createElementNS(S,'tspan');cw.textContent=d.plain;cat.appendChild(cw);
- if(!isC){var vv=document.createElementNS(S,'tspan');vv.setAttribute('fill','var(--muted)');vv.textContent='  ·  '+d.now;cat.appendChild(vv);}
- labelEls.push({cw:cw,plain:d.plain,insider:d.insider});
- [t1,cat].forEach(function(n){n.style.cursor='pointer';n.addEventListener('click',function(){select(c.k);});});
+/* selection + hover dim (click opens the rich panel, unchanged) */
+var curSel=null;
+function dim(k){svg.querySelectorAll('.part').forEach(function(p){p.classList.toggle('dim',!!k&&p.getAttribute('data-key')!==k);});}
+svg.querySelectorAll('.part[data-key]').forEach(function(g){var k=g.getAttribute('data-key');
+ g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',(k==='coach'?'The coach':P[k].name));
+ g.addEventListener('click',function(){select(k);});
+ g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();select(k);}});
+ g.addEventListener('pointerenter',function(){dim(k);});
+ g.addEventListener('pointerleave',function(){dim(curSel);});
 });
 
-/* selection ring + pulse */
-var sel=E('circle',{r:0,fill:'none','stroke-width':2.5,opacity:0});
-var FOCUS={a4:[250,176,40],a2:[176,214,38],a6:[266,312,17],a5:[160,312,17],a3:[84,297,26],a1:[212,328,19],coach:[426,270,26]};
-var pulse=E('circle',{cx:212,cy:328,r:15,fill:'none',stroke:'var(--warn)','stroke-width':2,'class':'bt-pulse'});
+/* mobile (≤620px): crop the viewBox to the boat + a compact HTML legend below it */
+var WORD={a4:{p:'STRENGTH',i:'MAINSAIL'},a2:{p:'STRENGTH',i:'JIB'},a6:{p:'YOUR READ',i:'COMPASS'},a5:{p:'FOLLOW-THROUGH',i:'HELM'},a3:{p:'PEOPLE',i:'FLEET'},a1:{p:'INTAKE',i:'THE HULL'}};
+var mq=window.matchMedia('(max-width:620px)');
+function applyMode(){svg.setAttribute('viewBox',mq.matches?'130 92 640 486':'0 0 1040 680');}
+applyMode();if(mq.addEventListener)mq.addEventListener('change',applyMode);else if(mq.addListener)mq.addListener(applyMode);
+(function(){var ml=document.getElementById('btMobLegend');if(!ml)return;
+ var order=scored.slice().sort(function(a,b){return P[b].now-P[a].now;});var h='';
+ order.forEach(function(k){var d=P[k],dd=d.now-d.then,dl=(dd>0?'+':'')+dd,ar=dd>0?' ▲':(dd<0?' ▼':' —'),isL=k===leakKey;
+  h+='<div class="bt-mlr'+(isL?' leak':'')+'"><span class="mn">'+SHORT[k]+'</span><span class="mw pw" data-plain="'+WORD[k].p+'" data-ins="'+WORD[k].i+'">'+WORD[k].p+'</span><span class="mv">'+d.now+' · '+dl+ar+(isL?' · the leak':'')+'</span></div>';});
+ ml.innerHTML=h+'<div class="bt-mnote">The coach is the lighthouse — grounded, cites only.</div>';})();
 
-/* tooltip + hit areas */
-var tip=document.getElementById('btTip');
-function tipShow(k,fx,fy){tip.textContent=(k==='coach')?'The coach — ask about your boat':P[k].name;var r=svg.getBoundingClientRect();tip.style.left=(fx*r.width/440)+'px';tip.style.top=(fy*r.height/392)+'px';tip.style.opacity=1;}
-function tipHide(){tip.style.opacity=0;}
-Object.keys(FOCUS).forEach(function(k){var f=FOCUS[k];
- var hit=E('circle',{cx:f[0],cy:f[1],r:f[2],fill:'transparent','class':'bt-hit',tabindex:'0',role:'button','aria-label':(k==='coach'?'The coach':P[k].name)});
- hit.addEventListener('pointerenter',function(){tipShow(k,f[0],f[1]);});
- hit.addEventListener('pointerleave',tipHide);
- hit.addEventListener('click',function(){select(k);});
- hit.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();select(k);}});
-});
-
-/* panel */
-var panel=document.getElementById('btPanel');var started=false,insiderOn=false;
-function focusRing(k){var f=FOCUS[k];var col=k==='coach'?'var(--good)':(P[k].kind==='leak'?'var(--warn)':'var(--steel)');sel.setAttribute('cx',f[0]);sel.setAttribute('cy',f[1]);sel.setAttribute('r',f[2]);sel.setAttribute('stroke',col);sel.setAttribute('opacity',1);}
-function select(k){if(!started){started=true;pulse.style.display='none';}tip.style.opacity=0;focusRing(k);panel.innerHTML=(k==='coach')?coachHome():detail(k);}
+/* panel + selection */
+var panel=document.getElementById('btPanel');var insiderOn=false;
+function select(k){curSel=k;dim(k);panel.innerHTML=(k==='coach')?coachHome():detail(k);}
 function detail(k){var d=P[k];var leak=d.kind==='leak';var cls=leak?'leak':'sail';var dd=d.now-d.then;var dl=(dd>=0?'+':'')+dd;
  return ''
  +'<div class="bt-eb '+cls+'"><span class="pw" data-plain="'+d.plain+'" data-insider="'+d.insider+'">'+(insiderOn?d.insider:d.plain)+'</span><span class="d">'+d.then+' → '+d.now+'  ('+dl+')</span></div>'
@@ -1677,10 +1695,11 @@ panel.addEventListener('click',function(e){var b=e.target.closest('[data-act]');
  else if(act==='run'){if(window.gpOpen)window.gpOpen(b.dataset.run);}
  else if(act==='sec'){openSec(b.dataset.sec);}});
 
-/* vocabulary toggle */
+/* vocabulary toggle — swaps every .pw word (boat callouts, mobile legend, panel eyebrow) */
 var pB=document.getElementById('btPlain'),iB=document.getElementById('btInsider');
-function setV(on){insiderOn=on;labelEls.forEach(function(l){l.cw.textContent=on?l.insider:l.plain;});var pw=panel.querySelector('.pw');if(pw)pw.textContent=on?pw.dataset.insider:pw.dataset.plain;pB.setAttribute('aria-pressed',String(!on));iB.setAttribute('aria-pressed',String(on));}
+function setV(on){insiderOn=on;document.querySelectorAll('.pw').forEach(function(w){var ins=w.dataset.ins||w.dataset.insider,pl=w.dataset.plain;if(ins&&pl)w.textContent=on?ins:pl;});pB.setAttribute('aria-pressed',String(!on));iB.setAttribute('aria-pressed',String(on));}
 pB.onclick=function(){setV(false);};iB.onclick=function(){setV(true);};
+setV(false);
 })();
 </script>
 </body>
