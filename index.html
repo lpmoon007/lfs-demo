@@ -521,6 +521,24 @@ body.touring{padding-bottom:90px}
 <div class="tb-meta"><div class="tb-stat">Run <b>12</b> of 12</div><div class="tb-stat">Latest <b>Overdrive</b></div><button class="dbtn" data-openrun="r4" style="font-size:11.5px">Read run 12 gameplay →</button><div class="pill"><span class="cv"></span> 2,411 logged events across twelve runs</div></div>
 </div>
 
+<!-- ============ SAILBOAT HERO (full-width, above the tabbed grid) ============ -->
+<div class="bt-hero">
+<div class="bt-head"><div class="bt-title">Your leadership, as a boat</div><div class="bt-note2">Tap any part — a sail to see how you built it, the leak to see what's next. The lighthouse is your coach.</div></div>
+<div class="bt-stage">
+  <div class="bt-card">
+    <div class="bt-h"><div class="bt-k">After twelve runs · the story lens</div>
+      <div class="bt-seg" role="group" aria-label="Label vocabulary"><button id="btPlain" aria-pressed="true">Plain</button><button id="btInsider" aria-pressed="false">Insider</button></div>
+    </div>
+    <svg id="btBoat" class="bt-svg" viewBox="0 0 1040 680" role="img" aria-label="An interactive sailboat of your six markers: tap the sails, compass, helm, fleet, hull or lighthouse."></svg>
+    <div class="bt-tip" id="btTip"></div>
+    <div class="bt-mlegend" id="btMobLegend"></div>
+  </div>
+  <div class="bt-panel" id="btPanel">
+    <div class="bt-def"><div class="mk">⛵</div><h4>Tap any part of the boat.</h4><p>A full <b>sail</b> shows how you built that strength — cited to the run where it moved, so you can repeat it. The <b>leak</b> (pulsing) is your lowest marker and what to do about it. The <b>lighthouse</b> is your coach.</p></div>
+  </div>
+</div>
+</div>
+
 <div class="grid">
 <div class="panes">
 <div class="pane on" data-pane="overview" data-label="Home">
@@ -530,8 +548,10 @@ body.touring{padding-bottom:90px}
 .bt-head{margin:4px 0 12px}
 .bt-title{font-size:19px;font-weight:650;letter-spacing:-.01em;color:var(--ink)}
 .bt-note2{font-size:12px;color:var(--muted-soft);margin-top:3px}
+.bt-hero{max-width:1180px;margin:14px auto 10px}
 .bt-stage{display:grid;grid-template-columns:1fr;gap:18px;align-items:stretch}
 .bt-panel{max-width:none}
+@media(min-width:1181px){.bt-hero .bt-panel{max-width:900px;margin-left:auto;margin-right:auto;width:100%}}
 @media(min-width:901px){.bt-panel .bt-acts{max-width:640px}}
 .bt-card{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:16px 18px;position:relative}
 .bt-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:2px}
@@ -604,20 +624,7 @@ body.touring{padding-bottom:90px}
   #btBoat .bt-call,#btBoat .subcap,#btBoat .foot,#btBoat .legend{display:none}
 }
 </style>
-<div class="bt-head"><div class="bt-title">Your leadership, as a boat</div><div class="bt-note2">Tap any part — a sail to see how you built it, the leak to see what's next. The lighthouse is your coach.</div></div>
-<div class="bt-stage">
-  <div class="bt-card">
-    <div class="bt-h"><div class="bt-k">After twelve runs · the story lens</div>
-      <div class="bt-seg" role="group" aria-label="Label vocabulary"><button id="btPlain" aria-pressed="true">Plain</button><button id="btInsider" aria-pressed="false">Insider</button></div>
-    </div>
-    <svg id="btBoat" class="bt-svg" viewBox="0 0 1040 680" role="img" aria-label="An interactive sailboat of your six markers: tap the sails, compass, helm, fleet, hull or lighthouse."></svg>
-    <div class="bt-tip" id="btTip"></div>
-    <div class="bt-mlegend" id="btMobLegend"></div>
-  </div>
-  <div class="bt-panel" id="btPanel">
-    <div class="bt-def"><div class="mk">⛵</div><h4>Tap any part of the boat.</h4><p>A full <b>sail</b> shows how you built that strength — cited to the run where it moved, so you can repeat it. The <b>leak</b> (pulsing) is your lowest marker and what to do about it. The <b>lighthouse</b> is your coach.</p></div>
-  </div>
-</div>
+<!-- sailboat relocated to a full-width hero above the grid (see .bt-hero before <div class="grid">) -->
 <!-- ============ /SAILBOAT DOORWAY ============ -->
 
 <!-- ============ TWELVE-RUN TIMELINE (added) ============ -->
